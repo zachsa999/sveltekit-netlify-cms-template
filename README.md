@@ -1,5 +1,7 @@
 # A plug and play Sveltekit template with NetlifyCMS, MDsveX, and Tailwinds
 
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/buhrmi/sveltekit-netlify-cms&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+
 ### Why Tailwinds?
 
 Tailwinds is configured to only use svelte html and css files, its there only as a possibility. With preproccess it has no effect on the speed of the deployed site.
