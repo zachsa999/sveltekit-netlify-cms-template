@@ -4,7 +4,7 @@
 
 ### Why Tailwinds?
 
-Tailwinds is configured to only use svelte html and css files, its there only as a possibility. With preproccess it has no effect on the speed of the deployed site.
+Tailwinds is configured to only use svelte html and css files, its there only as a possibility. With preproccess it has no effect on the speed of the deployed site if it is not used.
 
 Visit [kit.svelte.dev](https://kit.svelte.dev) to read the SvelteKit docs.
 
