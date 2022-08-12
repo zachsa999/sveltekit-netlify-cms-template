@@ -1,0 +1,4 @@
+/* Enabling this vvv breaks mdsvex */
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;

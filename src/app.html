@@ -6,11 +6,11 @@
 	<link rel="icon" href="/favicon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-	%svelte.head%
+	%sveltekit.head%
 </head>
 
 <body>
-	<div id="svelte">%svelte.body%</div>
+	<div id="svelte">%sveltekit.body%</div>
 	<script>
 		if (window.netlifyIdentity) {
 			window.netlifyIdentity.on("init", user => {
