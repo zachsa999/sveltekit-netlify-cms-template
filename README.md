@@ -1,18 +1,22 @@
-# create-svelte
+# A plug and play Sveltekit template with NetlifyCMS, MDsveX, and Tailwinds
+
+### Why Tailwinds?
+
+Tailwinds is configured to only use svelte html and css files, its there only as a possibility. With preproccess it has no effect on the speed of the deployed site.
+
+Visit [kit.svelte.dev](https://kit.svelte.dev) to read the SvelteKit docs.
+
+Go to [netlifycms.org](https://www.netlifycms.org) to check out the static git based cms!
+
+Integrates with [mdsvex.com](https://mdsvex.com) for powerful clean markdown. This is based on [mdx](https://mdxjs.com/docs/what-is-mdx/#mdx-syntax), view this site for the syntax.
+
+## create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
 ## Developing
 
