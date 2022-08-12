@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+collections:
+  - name: routes
+    identifier_field: name
+    label: routes
+    folder: src/routes
+    create: true
+    fields:
+      - name: title
+      - name: nav_label
+      - name: body
+        widget: markdown
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+search: false
+
+
+
+# site_url: https://your-site.com
+# display_url: https://your-site.com
+# logo_url: https://your-site.com/images/logo.svg
