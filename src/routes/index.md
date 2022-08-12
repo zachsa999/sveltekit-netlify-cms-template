@@ -3,6 +3,7 @@ label: Home
 title: SvelteKit Netlify CMS
 ---
 
+
 Visit [kit.svelte.dev](https://kit.svelte.dev) to read the SvelteKit docs.
 
 Go to [netlifycms.org](https://www.netlifycms.org) to check out the static git based cms!
