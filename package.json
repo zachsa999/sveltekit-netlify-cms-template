@@ -11,25 +11,24 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.22.2",
+		"@playwright/test": "^1.25.1",
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-static": "^1.0.0-next.39",
+		"@sveltejs/adapter-static": "^1.0.0-next.41",
 		"@sveltejs/kit": "next",
 		"autoprefixer": "^10.4.8",
-		"eslint": "^8.16.0",
+		"eslint": "^8.23.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"mdsvex": "^0.10.6",
-		"postcss": "^8.4.16",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
 		"svelte": "^3.44.0",
 		"svelte-preprocess": "^4.10.7",
-		"tailwindcss": "^3.1.8",
-		"vite": "^3.0.0"
+		"vite": "^3.0.9"
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-netlify": "1.0.0-next.75",
 		"mdsvex": "^0.10.6",
 		"netlify-cms-app": "^2.15.72"
 	}

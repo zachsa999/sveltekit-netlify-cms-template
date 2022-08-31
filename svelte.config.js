@@ -1,18 +1,21 @@
 import { mdsvex } from 'mdsvex';
-import mdsvexConfig from './mdsvex.config.js';
 import adapter from '@sveltejs/adapter-netlify'
-import preprocess from "svelte-preprocess";
-
 
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	extensions: ['.svelte', '.svelte.md', '.md', '.svx'],
 	preprocess: [
-		preprocess({
-			postcss: true,
-		}),
+
+		mdsvex({
+			extensions: ['.svelte.md', '.md', '.svx'],
+			smartypants: {
+				dashes: 'oldschool'
+			},
+			remarkPlugins: [],
+			rehypePlugins: []
+		})
 	],
-	extensions: ['.svelte', ...mdsvexConfig.extensions],
 
 	kit: {
 		adapter: adapter({
@@ -26,11 +29,9 @@ const config = {
 
 		prerender: {
 			// This can be false if you're using a fallback (i.e. SPA mode)
-			default: true
 		}
 	},
 
-	preprocess: [mdsvex(mdsvexConfig)]
 };
 
 export default config;
