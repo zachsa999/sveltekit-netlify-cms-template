@@ -14,7 +14,7 @@ collections:
         widget: markdown
   - label: "Blog"
     name: "posts"
-    folder: "_posts"
+    folder: "content/_posts"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
