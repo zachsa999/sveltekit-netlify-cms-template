@@ -1,62 +1,21 @@
-var __create = Object.create;
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key2 of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key2) && key2 !== except)
-        __defProp(to, key2, { get: () => from[key2], enumerable: !(desc = __getOwnPropDesc(from, key2)) || desc.enumerable });
-  }
-  return to;
-};
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-var __accessCheck = (obj, member, msg) => {
-  if (!member.has(obj))
-    throw TypeError("Cannot " + msg);
-};
-var __privateGet = (obj, member, getter) => {
-  __accessCheck(obj, member, "read from private field");
-  return getter ? getter.call(obj) : member.get(obj);
-};
-var __privateAdd = (obj, member, value) => {
-  if (member.has(obj))
-    throw TypeError("Cannot add the same private member more than once");
-  member instanceof WeakSet ? member.add(obj) : member.set(obj, value);
-};
-var __privateSet = (obj, member, value, setter) => {
-  __accessCheck(obj, member, "write to private field");
-  setter ? setter.call(obj, value) : member.set(obj, value);
-  return value;
-};
-var stdin_exports = {};
-__export(stdin_exports, {
-  Server: () => Server,
-  override: () => override
-});
-module.exports = __toCommonJS(stdin_exports);
-var import_index_3e01a4ca = require("./_app/immutable/chunks/index-3e01a4ca.js");
-var _use_hashes, _script_needs_csp, _style_needs_csp, _directives, _script_src, _style_src, _nonce;
+import { c as create_ssr_component, s as setContext, v as validate_component, m as missing_component, n as noop, a as safe_not_equal } from "./chunks/index.js";
+import { devalue } from "devalue";
+import * as cookie from "cookie";
+import * as set_cookie_parser from "set-cookie-parser";
 function afterUpdate() {
 }
-const Root = (0, import_index_3e01a4ca.c)(($$result, $$props, $$bindings, slots) => {
+function set_prerendering(value) {
+}
+const Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { stores } = $$props;
   let { page } = $$props;
   let { components } = $$props;
-  let { props_0 = null } = $$props;
-  let { props_1 = null } = $$props;
-  let { props_2 = null } = $$props;
-  (0, import_index_3e01a4ca.s)("__svelte__", stores);
+  let { data_0 = null } = $$props;
+  let { data_1 = null } = $$props;
+  let { errors } = $$props;
+  {
+    setContext("__svelte__", stores);
+  }
   afterUpdate(stores.page.notify);
   if ($$props.stores === void 0 && $$bindings.stores && stores !== void 0)
     $$bindings.stores(stores);
@@ -64,47 +23,151 @@ const Root = (0, import_index_3e01a4ca.c)(($$result, $$props, $$bindings, slots)
     $$bindings.page(page);
   if ($$props.components === void 0 && $$bindings.components && components !== void 0)
     $$bindings.components(components);
-  if ($$props.props_0 === void 0 && $$bindings.props_0 && props_0 !== void 0)
-    $$bindings.props_0(props_0);
-  if ($$props.props_1 === void 0 && $$bindings.props_1 && props_1 !== void 0)
-    $$bindings.props_1(props_1);
-  if ($$props.props_2 === void 0 && $$bindings.props_2 && props_2 !== void 0)
-    $$bindings.props_2(props_2);
+  if ($$props.data_0 === void 0 && $$bindings.data_0 && data_0 !== void 0)
+    $$bindings.data_0(data_0);
+  if ($$props.data_1 === void 0 && $$bindings.data_1 && data_1 !== void 0)
+    $$bindings.data_1(data_1);
+  if ($$props.errors === void 0 && $$bindings.errors && errors !== void 0)
+    $$bindings.errors(errors);
   {
     stores.page.set(page);
   }
   return `
 
 
-${components[1] ? `${(0, import_index_3e01a4ca.v)(components[0] || import_index_3e01a4ca.m, "svelte:component").$$render($$result, Object.assign(props_0 || {}), {}, {
+${components[1] ? `${validate_component(components[0] || missing_component, "svelte:component").$$render($$result, { data: data_0, errors }, {}, {
     default: () => {
-      return `${components[2] ? `${(0, import_index_3e01a4ca.v)(components[1] || import_index_3e01a4ca.m, "svelte:component").$$render($$result, Object.assign(props_1 || {}), {}, {
-        default: () => {
-          return `${(0, import_index_3e01a4ca.v)(components[2] || import_index_3e01a4ca.m, "svelte:component").$$render($$result, Object.assign(props_2 || {}), {}, {})}`;
-        }
-      })}` : `${(0, import_index_3e01a4ca.v)(components[1] || import_index_3e01a4ca.m, "svelte:component").$$render($$result, Object.assign(props_1 || {}), {}, {})}`}`;
+      return `${validate_component(components[1] || missing_component, "svelte:component").$$render($$result, { data: data_1, errors }, {}, {})}`;
     }
-  })}` : `${(0, import_index_3e01a4ca.v)(components[0] || import_index_3e01a4ca.m, "svelte:component").$$render($$result, Object.assign(props_0 || {}), {}, {})}`}
+  })}` : `${validate_component(components[0] || missing_component, "svelte:component").$$render($$result, { data: data_0, errors }, {}, {})}`}
 
 ${``}`;
 });
-function to_headers(object) {
-  const headers = new Headers();
-  if (object) {
-    for (const key2 in object) {
-      const value = object[key2];
-      if (!value)
-        continue;
-      if (Array.isArray(value)) {
-        value.forEach((value2) => {
-          headers.append(key2, value2);
-        });
-      } else {
-        headers.set(key2, value);
+class HttpError {
+  name = "HttpError";
+  stack = void 0;
+  constructor(status, message) {
+    this.status = status;
+    this.message = message ?? `Error: ${status}`;
+  }
+  toString() {
+    return this.message;
+  }
+}
+class Redirect {
+  constructor(status, location) {
+    this.status = status;
+    this.location = location;
+  }
+}
+function serialize_error(error2, get_stack) {
+  return JSON.stringify(error_to_pojo(error2, get_stack));
+}
+function error_to_pojo(error2, get_stack) {
+  if (error2 instanceof HttpError) {
+    return {
+      message: error2.message,
+      status: error2.status,
+      __is_http_error: true
+    };
+  }
+  const {
+    name,
+    message,
+    stack,
+    cause,
+    ...custom
+  } = error2;
+  const object = { name, message, stack: get_stack(error2) };
+  if (cause)
+    object.cause = error_to_pojo(cause, get_stack);
+  for (const key2 in custom) {
+    object[key2] = custom[key2];
+  }
+  return object;
+}
+function check_method_names(mod) {
+  ["get", "post", "put", "patch", "del"].forEach((m) => {
+    if (m in mod) {
+      const replacement = m === "del" ? "DELETE" : m.toUpperCase();
+      throw Error(
+        `Endpoint method "${m}" has changed to "${replacement}". See https://github.com/sveltejs/kit/discussions/5359 for more information.`
+      );
+    }
+  });
+}
+const GENERIC_ERROR = {
+  id: "__error"
+};
+function method_not_allowed(mod, method) {
+  return new Response(`${method} method not allowed`, {
+    status: 405,
+    headers: {
+      allow: allowed_methods(mod).join(", ")
+    }
+  });
+}
+function allowed_methods(mod) {
+  const allowed = [];
+  for (const method in ["GET", "POST", "PUT", "PATCH", "DELETE"]) {
+    if (method in mod)
+      allowed.push(method);
+  }
+  if (mod.GET || mod.HEAD)
+    allowed.push("HEAD");
+  return allowed;
+}
+function data_response(data) {
+  try {
+    return new Response(`window.__sveltekit_data = ${devalue(data)}`, {
+      headers: {
+        "content-type": "application/javascript"
       }
+    });
+  } catch (e) {
+    const error2 = e;
+    const match = /\[(\d+)\]\.data\.(.+)/.exec(error2.path);
+    const message = match ? `${error2.message} (data.${match[2]})` : error2.message;
+    return new Response(`throw new Error(${JSON.stringify(message)})`, {
+      headers: {
+        "content-type": "application/javascript"
+      }
+    });
+  }
+}
+async function render_endpoint(event, mod) {
+  const method = event.request.method;
+  check_method_names(mod);
+  let handler = mod[method];
+  if (!handler && method === "HEAD") {
+    handler = mod.GET;
+  }
+  if (!handler) {
+    return method_not_allowed(mod, method);
+  }
+  try {
+    const response = await handler(
+      event
+    );
+    if (!(response instanceof Response)) {
+      return new Response(
+        `Invalid response from route ${event.url.pathname}: handler should return a Response object`,
+        { status: 500 }
+      );
+    }
+    return response;
+  } catch (error2) {
+    if (error2 instanceof HttpError) {
+      return new Response(error2.message, { status: error2.status });
+    } else if (error2 instanceof Redirect) {
+      return new Response(void 0, {
+        status: error2.status,
+        headers: { Location: error2.location }
+      });
+    } else {
+      throw error2;
     }
   }
-  return headers;
 }
 function negotiate(accept, types) {
   const parts = [];
@@ -141,383 +204,6 @@ function negotiate(accept, types) {
   }
   return accepted;
 }
-function hash(value) {
-  let hash2 = 5381;
-  let i = value.length;
-  if (typeof value === "string") {
-    while (i)
-      hash2 = hash2 * 33 ^ value.charCodeAt(--i);
-  } else {
-    while (i)
-      hash2 = hash2 * 33 ^ value[--i];
-  }
-  return (hash2 >>> 0).toString(36);
-}
-function lowercase_keys(obj) {
-  const clone = {};
-  for (const key2 in obj) {
-    clone[key2.toLowerCase()] = obj[key2];
-  }
-  return clone;
-}
-function is_pojo(body) {
-  if (typeof body !== "object")
-    return false;
-  if (body) {
-    if (body instanceof Uint8Array)
-      return false;
-    if (body instanceof ReadableStream)
-      return false;
-    if (body._readableState && typeof body.pipe === "function") {
-      throw new Error("Node streams are no longer supported \u2014 use a ReadableStream instead");
-    }
-  }
-  return true;
-}
-function serialize_error(error2, get_stack) {
-  return JSON.stringify(clone_error(error2, get_stack));
-}
-function clone_error(error2, get_stack) {
-  const {
-    name,
-    message,
-    stack,
-    cause,
-    ...custom
-  } = error2;
-  const object = { name, message, stack: get_stack(error2) };
-  if (cause)
-    object.cause = clone_error(cause, get_stack);
-  for (const key2 in custom) {
-    object[key2] = custom[key2];
-  }
-  return object;
-}
-function check_method_names(mod) {
-  ["get", "post", "put", "patch", "del"].forEach((m) => {
-    if (m in mod) {
-      const replacement = m === "del" ? "DELETE" : m.toUpperCase();
-      throw Error(
-        `Endpoint method "${m}" has changed to "${replacement}". See https://github.com/sveltejs/kit/discussions/5359 for more information.`
-      );
-    }
-  });
-}
-const GENERIC_ERROR = {
-  id: "__error"
-};
-function error(body) {
-  return new Response(body, {
-    status: 500
-  });
-}
-function is_string(s2) {
-  return typeof s2 === "string" || s2 instanceof String;
-}
-const text_types = /* @__PURE__ */ new Set([
-  "application/xml",
-  "application/json",
-  "application/x-www-form-urlencoded",
-  "multipart/form-data"
-]);
-const bodyless_status_codes = /* @__PURE__ */ new Set([101, 204, 205, 304]);
-function is_text(content_type) {
-  if (!content_type)
-    return true;
-  const type = content_type.split(";")[0].toLowerCase();
-  return type.startsWith("text/") || type.endsWith("+xml") || text_types.has(type);
-}
-async function render_endpoint(event, mod, options) {
-  const { method } = event.request;
-  check_method_names(mod);
-  let handler = mod[method];
-  if (!handler && method === "HEAD") {
-    handler = mod.GET;
-  }
-  if (!handler) {
-    const allowed = [];
-    for (const method2 in ["GET", "POST", "PUT", "PATCH", "DELETE"]) {
-      if (mod[method2])
-        allowed.push(method2);
-    }
-    if (mod.GET || mod.HEAD)
-      allowed.push("HEAD");
-    return event.request.headers.get("x-sveltekit-load") ? new Response(void 0, {
-      status: 204
-    }) : new Response(`${method} method not allowed`, {
-      status: 405,
-      headers: {
-        allow: allowed.join(", ")
-      }
-    });
-  }
-  const response = await handler(event);
-  const preface = `Invalid response from route ${event.url.pathname}`;
-  if (typeof response !== "object") {
-    return error(`${preface}: expected an object, got ${typeof response}`);
-  }
-  if (response.fallthrough) {
-    throw new Error(
-      "fallthrough is no longer supported. Use matchers instead: https://kit.svelte.dev/docs/routing#advanced-routing-matching"
-    );
-  }
-  const { status = 200, body = {} } = response;
-  const headers = response.headers instanceof Headers ? new Headers(response.headers) : to_headers(response.headers);
-  const type = headers.get("content-type");
-  if (!is_text(type) && !(body instanceof Uint8Array || body instanceof ReadableStream || is_string(body))) {
-    return error(
-      `${preface}: body must be an instance of string, Uint8Array or ReadableStream if content-type is not a supported textual content-type`
-    );
-  }
-  let normalized_body;
-  if (is_pojo(body) && (!type || type.startsWith("application/json"))) {
-    headers.set("content-type", "application/json; charset=utf-8");
-    normalized_body = body instanceof Error ? serialize_error(body, options.get_stack) : JSON.stringify(body);
-  } else {
-    normalized_body = body;
-  }
-  if ((typeof normalized_body === "string" || normalized_body instanceof Uint8Array) && !headers.has("etag")) {
-    const cache_control = headers.get("cache-control");
-    if (!cache_control || !/(no-store|immutable)/.test(cache_control)) {
-      headers.set("etag", `"${hash(normalized_body)}"`);
-    }
-  }
-  return new Response(
-    method !== "HEAD" && !bodyless_status_codes.has(status) ? normalized_body : void 0,
-    {
-      status,
-      headers
-    }
-  );
-}
-var chars$1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_$";
-var unsafeChars = /[<>\b\f\n\r\t\0\u2028\u2029]/g;
-var reserved = /^(?:do|if|in|for|int|let|new|try|var|byte|case|char|else|enum|goto|long|this|void|with|await|break|catch|class|const|final|float|short|super|throw|while|yield|delete|double|export|import|native|return|switch|throws|typeof|boolean|default|extends|finally|package|private|abstract|continue|debugger|function|volatile|interface|protected|transient|implements|instanceof|synchronized)$/;
-var escaped = {
-  "<": "\\u003C",
-  ">": "\\u003E",
-  "/": "\\u002F",
-  "\\": "\\\\",
-  "\b": "\\b",
-  "\f": "\\f",
-  "\n": "\\n",
-  "\r": "\\r",
-  "	": "\\t",
-  "\0": "\\0",
-  "\u2028": "\\u2028",
-  "\u2029": "\\u2029"
-};
-var objectProtoOwnPropertyNames = Object.getOwnPropertyNames(Object.prototype).sort().join("\0");
-function devalue(value) {
-  var counts = /* @__PURE__ */ new Map();
-  function walk(thing) {
-    if (typeof thing === "function") {
-      throw new Error("Cannot stringify a function");
-    }
-    if (counts.has(thing)) {
-      counts.set(thing, counts.get(thing) + 1);
-      return;
-    }
-    counts.set(thing, 1);
-    if (!isPrimitive(thing)) {
-      var type = getType(thing);
-      switch (type) {
-        case "Number":
-        case "String":
-        case "Boolean":
-        case "Date":
-        case "RegExp":
-          return;
-        case "Array":
-          thing.forEach(walk);
-          break;
-        case "Set":
-        case "Map":
-          Array.from(thing).forEach(walk);
-          break;
-        default:
-          var proto = Object.getPrototypeOf(thing);
-          if (proto !== Object.prototype && proto !== null && Object.getOwnPropertyNames(proto).sort().join("\0") !== objectProtoOwnPropertyNames) {
-            throw new Error("Cannot stringify arbitrary non-POJOs");
-          }
-          if (Object.getOwnPropertySymbols(thing).length > 0) {
-            throw new Error("Cannot stringify POJOs with symbolic keys");
-          }
-          Object.keys(thing).forEach(function(key2) {
-            return walk(thing[key2]);
-          });
-      }
-    }
-  }
-  walk(value);
-  var names = /* @__PURE__ */ new Map();
-  Array.from(counts).filter(function(entry) {
-    return entry[1] > 1;
-  }).sort(function(a, b) {
-    return b[1] - a[1];
-  }).forEach(function(entry, i) {
-    names.set(entry[0], getName(i));
-  });
-  function stringify(thing) {
-    if (names.has(thing)) {
-      return names.get(thing);
-    }
-    if (isPrimitive(thing)) {
-      return stringifyPrimitive(thing);
-    }
-    var type = getType(thing);
-    switch (type) {
-      case "Number":
-      case "String":
-      case "Boolean":
-        return "Object(" + stringify(thing.valueOf()) + ")";
-      case "RegExp":
-        return "new RegExp(" + stringifyString(thing.source) + ', "' + thing.flags + '")';
-      case "Date":
-        return "new Date(" + thing.getTime() + ")";
-      case "Array":
-        var members = thing.map(function(v, i) {
-          return i in thing ? stringify(v) : "";
-        });
-        var tail = thing.length === 0 || thing.length - 1 in thing ? "" : ",";
-        return "[" + members.join(",") + tail + "]";
-      case "Set":
-      case "Map":
-        return "new " + type + "([" + Array.from(thing).map(stringify).join(",") + "])";
-      default:
-        var obj = "{" + Object.keys(thing).map(function(key2) {
-          return safeKey(key2) + ":" + stringify(thing[key2]);
-        }).join(",") + "}";
-        var proto = Object.getPrototypeOf(thing);
-        if (proto === null) {
-          return Object.keys(thing).length > 0 ? "Object.assign(Object.create(null)," + obj + ")" : "Object.create(null)";
-        }
-        return obj;
-    }
-  }
-  var str = stringify(value);
-  if (names.size) {
-    var params_1 = [];
-    var statements_1 = [];
-    var values_1 = [];
-    names.forEach(function(name, thing) {
-      params_1.push(name);
-      if (isPrimitive(thing)) {
-        values_1.push(stringifyPrimitive(thing));
-        return;
-      }
-      var type = getType(thing);
-      switch (type) {
-        case "Number":
-        case "String":
-        case "Boolean":
-          values_1.push("Object(" + stringify(thing.valueOf()) + ")");
-          break;
-        case "RegExp":
-          values_1.push(thing.toString());
-          break;
-        case "Date":
-          values_1.push("new Date(" + thing.getTime() + ")");
-          break;
-        case "Array":
-          values_1.push("Array(" + thing.length + ")");
-          thing.forEach(function(v, i) {
-            statements_1.push(name + "[" + i + "]=" + stringify(v));
-          });
-          break;
-        case "Set":
-          values_1.push("new Set");
-          statements_1.push(name + "." + Array.from(thing).map(function(v) {
-            return "add(" + stringify(v) + ")";
-          }).join("."));
-          break;
-        case "Map":
-          values_1.push("new Map");
-          statements_1.push(name + "." + Array.from(thing).map(function(_a) {
-            var k = _a[0], v = _a[1];
-            return "set(" + stringify(k) + ", " + stringify(v) + ")";
-          }).join("."));
-          break;
-        default:
-          values_1.push(Object.getPrototypeOf(thing) === null ? "Object.create(null)" : "{}");
-          Object.keys(thing).forEach(function(key2) {
-            statements_1.push("" + name + safeProp(key2) + "=" + stringify(thing[key2]));
-          });
-      }
-    });
-    statements_1.push("return " + str);
-    return "(function(" + params_1.join(",") + "){" + statements_1.join(";") + "}(" + values_1.join(",") + "))";
-  } else {
-    return str;
-  }
-}
-function getName(num) {
-  var name = "";
-  do {
-    name = chars$1[num % chars$1.length] + name;
-    num = ~~(num / chars$1.length) - 1;
-  } while (num >= 0);
-  return reserved.test(name) ? name + "_" : name;
-}
-function isPrimitive(thing) {
-  return Object(thing) !== thing;
-}
-function stringifyPrimitive(thing) {
-  if (typeof thing === "string")
-    return stringifyString(thing);
-  if (thing === void 0)
-    return "void 0";
-  if (thing === 0 && 1 / thing < 0)
-    return "-0";
-  var str = String(thing);
-  if (typeof thing === "number")
-    return str.replace(/^(-)?0\./, "$1.");
-  return str;
-}
-function getType(thing) {
-  return Object.prototype.toString.call(thing).slice(8, -1);
-}
-function escapeUnsafeChar(c) {
-  return escaped[c] || c;
-}
-function escapeUnsafeChars(str) {
-  return str.replace(unsafeChars, escapeUnsafeChar);
-}
-function safeKey(key2) {
-  return /^[_$a-zA-Z][_$a-zA-Z0-9]*$/.test(key2) ? key2 : escapeUnsafeChars(JSON.stringify(key2));
-}
-function safeProp(key2) {
-  return /^[_$a-zA-Z][_$a-zA-Z0-9]*$/.test(key2) ? "." + key2 : "[" + escapeUnsafeChars(JSON.stringify(key2)) + "]";
-}
-function stringifyString(str) {
-  var result = '"';
-  for (var i = 0; i < str.length; i += 1) {
-    var char = str.charAt(i);
-    var code = char.charCodeAt(0);
-    if (char === '"') {
-      result += '\\"';
-    } else if (char in escaped) {
-      result += escaped[char];
-    } else if (code >= 55296 && code <= 57343) {
-      var next = str.charCodeAt(i + 1);
-      if (code <= 56319 && (next >= 56320 && next <= 57343)) {
-        result += char + str[++i];
-      } else {
-        result += "\\u" + code.toString(16).toUpperCase();
-      }
-    } else {
-      result += char;
-    }
-  }
-  result += '"';
-  return result;
-}
-function noop() {
-}
-function safe_not_equal(a, b) {
-  return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
-}
-Promise.resolve();
 const subscriber_queue = [];
 function readable(value, start) {
   return {
@@ -565,8 +251,17 @@ function writable(value, start = noop) {
   }
   return { set, update, subscribe };
 }
-function coalesce_to_error(err) {
-  return err instanceof Error || err && err.name && err.message ? err : new Error(JSON.stringify(err));
+function hash(value) {
+  let hash2 = 5381;
+  let i = value.length;
+  if (typeof value === "string") {
+    while (i)
+      hash2 = hash2 * 33 ^ value.charCodeAt(--i);
+  } else {
+    while (i)
+      hash2 = hash2 * 33 ^ value[--i];
+  }
+  return (hash2 >>> 0).toString(36);
 }
 const render_json_payload_script_dict = {
   "<": "\\u003C",
@@ -600,11 +295,10 @@ const escape_html_attr_regex = new RegExp(
 );
 function escape_html_attr(str) {
   const escaped_str = str.replace(escape_html_attr_regex, (match) => {
-    var _a;
     if (match.length === 2) {
       return match;
     }
-    return (_a = escape_html_attr_dict[match]) != null ? _a : `&#${match.charCodeAt(0)};`;
+    return escape_html_attr_dict[match] ?? `&#${match.charCodeAt(0)};`;
   });
   return `"${escaped_str}"`;
 }
@@ -614,7 +308,7 @@ function sha256(data) {
   if (!key[0])
     precompute();
   const out = init.slice(0);
-  const array2 = encode$1(data);
+  const array2 = encode(data);
   for (let i = 0; i < array2.length; i += 16) {
     const w = array2.subarray(i, i + 16);
     let tmp;
@@ -695,7 +389,7 @@ function reverse_endianness(bytes) {
     bytes[i + 3] = a;
   }
 }
-function encode$1(str) {
+function encode(str) {
   const encoded = encoder.encode(str);
   const length = encoded.length * 8;
   const size = 512 * Math.ceil((length + 65) / 512);
@@ -748,64 +442,64 @@ const quoted = /* @__PURE__ */ new Set([
 ]);
 const crypto_pattern = /^(nonce|sha\d\d\d)-/;
 class BaseProvider {
+  #use_hashes;
+  #script_needs_csp;
+  #style_needs_csp;
+  #directives;
+  #script_src;
+  #style_src;
+  #nonce;
   constructor(use_hashes, directives, nonce, dev) {
-    __privateAdd(this, _use_hashes, void 0);
-    __privateAdd(this, _script_needs_csp, void 0);
-    __privateAdd(this, _style_needs_csp, void 0);
-    __privateAdd(this, _directives, void 0);
-    __privateAdd(this, _script_src, void 0);
-    __privateAdd(this, _style_src, void 0);
-    __privateAdd(this, _nonce, void 0);
-    __privateSet(this, _use_hashes, use_hashes);
-    __privateSet(this, _directives, dev ? { ...directives } : directives);
-    const d = __privateGet(this, _directives);
+    this.#use_hashes = use_hashes;
+    this.#directives = dev ? { ...directives } : directives;
+    const d = this.#directives;
     if (dev) {
       const effective_style_src2 = d["style-src"] || d["default-src"];
       if (effective_style_src2 && !effective_style_src2.includes("unsafe-inline")) {
         d["style-src"] = [...effective_style_src2, "unsafe-inline"];
       }
     }
-    __privateSet(this, _script_src, []);
-    __privateSet(this, _style_src, []);
+    this.#script_src = [];
+    this.#style_src = [];
     const effective_script_src = d["script-src"] || d["default-src"];
     const effective_style_src = d["style-src"] || d["default-src"];
-    __privateSet(this, _script_needs_csp, !!effective_script_src && effective_script_src.filter((value) => value !== "unsafe-inline").length > 0);
-    __privateSet(this, _style_needs_csp, !dev && !!effective_style_src && effective_style_src.filter((value) => value !== "unsafe-inline").length > 0);
-    this.script_needs_nonce = __privateGet(this, _script_needs_csp) && !__privateGet(this, _use_hashes);
-    this.style_needs_nonce = __privateGet(this, _style_needs_csp) && !__privateGet(this, _use_hashes);
-    __privateSet(this, _nonce, nonce);
+    this.#script_needs_csp = !!effective_script_src && effective_script_src.filter((value) => value !== "unsafe-inline").length > 0;
+    this.#style_needs_csp = !dev && !!effective_style_src && effective_style_src.filter((value) => value !== "unsafe-inline").length > 0;
+    this.script_needs_nonce = this.#script_needs_csp && !this.#use_hashes;
+    this.style_needs_nonce = this.#style_needs_csp && !this.#use_hashes;
+    this.#nonce = nonce;
   }
   add_script(content) {
-    if (__privateGet(this, _script_needs_csp)) {
-      if (__privateGet(this, _use_hashes)) {
-        __privateGet(this, _script_src).push(`sha256-${sha256(content)}`);
-      } else if (__privateGet(this, _script_src).length === 0) {
-        __privateGet(this, _script_src).push(`nonce-${__privateGet(this, _nonce)}`);
+    if (this.#script_needs_csp) {
+      if (this.#use_hashes) {
+        this.#script_src.push(`sha256-${sha256(content)}`);
+      } else if (this.#script_src.length === 0) {
+        this.#script_src.push(`nonce-${this.#nonce}`);
       }
     }
   }
   add_style(content) {
-    if (__privateGet(this, _style_needs_csp)) {
-      if (__privateGet(this, _use_hashes)) {
-        __privateGet(this, _style_src).push(`sha256-${sha256(content)}`);
-      } else if (__privateGet(this, _style_src).length === 0) {
-        __privateGet(this, _style_src).push(`nonce-${__privateGet(this, _nonce)}`);
+    if (this.#style_needs_csp) {
+      if (this.#use_hashes) {
+        this.#style_src.push(`sha256-${sha256(content)}`);
+      } else if (this.#style_src.length === 0) {
+        this.#style_src.push(`nonce-${this.#nonce}`);
       }
     }
   }
   get_header(is_meta = false) {
     const header = [];
-    const directives = { ...__privateGet(this, _directives) };
-    if (__privateGet(this, _style_src).length > 0) {
+    const directives = { ...this.#directives };
+    if (this.#style_src.length > 0) {
       directives["style-src"] = [
         ...directives["style-src"] || directives["default-src"] || [],
-        ...__privateGet(this, _style_src)
+        ...this.#style_src
       ];
     }
-    if (__privateGet(this, _script_src).length > 0) {
+    if (this.#script_src.length > 0) {
       directives["script-src"] = [
         ...directives["script-src"] || directives["default-src"] || [],
-        ...__privateGet(this, _script_src)
+        ...this.#script_src
       ];
     }
     for (const key2 in directives) {
@@ -830,13 +524,6 @@ class BaseProvider {
     return header.join("; ");
   }
 }
-_use_hashes = new WeakMap();
-_script_needs_csp = new WeakMap();
-_style_needs_csp = new WeakMap();
-_directives = new WeakMap();
-_script_src = new WeakMap();
-_style_src = new WeakMap();
-_nonce = new WeakMap();
 class CspProvider extends BaseProvider {
   get_meta() {
     const content = escape_html_attr(this.get_header(true));
@@ -845,12 +532,11 @@ class CspProvider extends BaseProvider {
 }
 class CspReportOnlyProvider extends BaseProvider {
   constructor(use_hashes, directives, nonce, dev) {
-    var _a2, _b2;
     var _a, _b;
     super(use_hashes, directives, nonce, dev);
     if (Object.values(directives).filter((v) => !!v).length > 0) {
-      const has_report_to = (_a2 = (_a = directives["report-to"]) == null ? void 0 : _a.length) != null ? _a2 : 0 > 0;
-      const has_report_uri = (_b2 = (_b = directives["report-uri"]) == null ? void 0 : _b.length) != null ? _b2 : 0 > 0;
+      const has_report_to = ((_a = directives["report-to"]) == null ? void 0 : _a.length) ?? 0 > 0;
+      const has_report_uri = ((_b = directives["report-uri"]) == null ? void 0 : _b.length) ?? 0 > 0;
       if (!has_report_to && !has_report_uri) {
         throw Error(
           "`content-security-policy-report-only` must be specified with either the `report-to` or `report-uri` directives, or both"
@@ -882,6 +568,270 @@ class Csp {
     this.csp_provider.add_style(content);
     this.report_only_provider.add_style(content);
   }
+}
+const updated = {
+  ...readable(false),
+  check: () => false
+};
+async function render_response({
+  branch,
+  fetched,
+  cookies,
+  options,
+  state,
+  page_config,
+  status,
+  error: error2 = null,
+  event,
+  resolve_opts,
+  validation_errors
+}) {
+  var _a;
+  if (state.prerendering) {
+    if (options.csp.mode === "nonce") {
+      throw new Error('Cannot use prerendering if config.kit.csp.mode === "nonce"');
+    }
+    if (options.template_contains_nonce) {
+      throw new Error("Cannot use prerendering if page template contains %sveltekit.nonce%");
+    }
+  }
+  const { entry } = options.manifest._;
+  const stylesheets = new Set(entry.stylesheets);
+  const modulepreloads = new Set(entry.imports);
+  const link_header_preloads = /* @__PURE__ */ new Set();
+  const inline_styles = /* @__PURE__ */ new Map();
+  let rendered;
+  const stack = error2 instanceof HttpError ? void 0 : error2 == null ? void 0 : error2.stack;
+  if (error2 && options.dev && !(error2 instanceof HttpError)) {
+    error2.stack = options.get_stack(error2);
+  }
+  if (resolve_opts.ssr) {
+    const props = {
+      stores: {
+        page: writable(null),
+        navigating: writable(null),
+        updated
+      },
+      components: await Promise.all(branch.map(({ node }) => node.component()))
+    };
+    let data = {};
+    for (let i = 0; i < branch.length; i += 1) {
+      data = { ...data, ...branch[i].data };
+      props[`data_${i}`] = data;
+    }
+    props.page = {
+      error: error2,
+      params: event.params,
+      routeId: event.routeId,
+      status,
+      url: event.url,
+      data
+    };
+    if (validation_errors) {
+      props.errors = validation_errors;
+    }
+    const print_error = (property, replacement) => {
+      Object.defineProperty(props.page, property, {
+        get: () => {
+          throw new Error(`$page.${property} has been replaced by $page.url.${replacement}`);
+        }
+      });
+    };
+    print_error("origin", "origin");
+    print_error("path", "pathname");
+    print_error("query", "searchParams");
+    rendered = options.root.render(props);
+    for (const { node } of branch) {
+      if (node.imports) {
+        node.imports.forEach((url) => modulepreloads.add(url));
+      }
+      if (node.stylesheets) {
+        node.stylesheets.forEach((url) => stylesheets.add(url));
+      }
+      if (node.inline_styles) {
+        Object.entries(await node.inline_styles()).forEach(([k, v]) => inline_styles.set(k, v));
+      }
+    }
+  } else {
+    rendered = { head: "", html: "", css: { code: "", map: null } };
+  }
+  let { head, html: body } = rendered;
+  const csp = new Csp(options.csp, {
+    dev: options.dev,
+    prerender: !!state.prerendering
+  });
+  const target = hash(body);
+  let assets2;
+  if (options.paths.assets) {
+    assets2 = options.paths.assets;
+  } else if ((_a = state.prerendering) == null ? void 0 : _a.fallback) {
+    assets2 = options.paths.base;
+  } else {
+    const segments = event.url.pathname.slice(options.paths.base.length).split("/").slice(2);
+    assets2 = segments.length > 0 ? segments.map(() => "..").join("/") : ".";
+  }
+  const prefixed = (path) => path.startsWith("/") ? path : `${assets2}/${path}`;
+  const serialized = { data: "", errors: "null" };
+  try {
+    serialized.data = devalue(branch.map(({ server_data }) => server_data));
+  } catch (e) {
+    const error3 = e;
+    const match = /\[(\d+)\]\.data\.(.+)/.exec(error3.path);
+    if (match)
+      throw new Error(`${error3.message} (data.${match[2]})`);
+    throw error3;
+  }
+  if (validation_errors) {
+    try {
+      serialized.errors = devalue(validation_errors);
+    } catch (e) {
+      const error3 = e;
+      if (error3.path)
+        throw new Error(`${error3.message} (errors.${error3.path})`);
+      throw error3;
+    }
+  }
+  const init_app = `
+		import { set_public_env, start } from ${s(prefixed(entry.file))};
+
+		set_public_env(${s(options.public_env)});
+
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="${target}"]').parentNode,
+			paths: ${s(options.paths)},
+			route: ${!!page_config.router},
+			spa: ${!resolve_opts.ssr},
+			trailing_slash: ${s(options.trailing_slash)},
+			hydrate: ${resolve_opts.ssr && page_config.hydrate ? `{
+				status: ${status},
+				error: ${error2 && serialize_error(error2, (e) => e.stack)},
+				node_ids: [${branch.map(({ node }) => node.index).join(", ")}],
+				params: ${devalue(event.params)},
+				routeId: ${s(event.routeId)},
+				data: ${serialized.data},
+				errors: ${serialized.errors}
+			}` : "null"}
+		});
+	`;
+  const init_service_worker = `
+		if ('serviceWorker' in navigator) {
+			addEventListener('load', function () {
+				navigator.serviceWorker.register('${options.service_worker}');
+			});
+		}
+	`;
+  if (inline_styles.size > 0) {
+    const content = Array.from(inline_styles.values()).join("\n");
+    const attributes = [];
+    if (options.dev)
+      attributes.push(" data-sveltekit");
+    if (csp.style_needs_nonce)
+      attributes.push(` nonce="${csp.nonce}"`);
+    csp.add_style(content);
+    head += `
+	<style${attributes.join("")}>${content}</style>`;
+  }
+  for (const dep of stylesheets) {
+    const path = prefixed(dep);
+    const attributes = [];
+    if (csp.style_needs_nonce) {
+      attributes.push(`nonce="${csp.nonce}"`);
+    }
+    if (inline_styles.has(dep)) {
+      attributes.push("disabled", 'media="(max-width: 0)"');
+    } else {
+      const preload_atts = ['rel="preload"', 'as="style"'].concat(attributes);
+      link_header_preloads.add(`<${encodeURI(path)}>; ${preload_atts.join(";")}; nopush`);
+    }
+    attributes.unshift('rel="stylesheet"');
+    head += `
+	<link href="${path}" ${attributes.join(" ")}>`;
+  }
+  if (page_config.router || page_config.hydrate) {
+    for (const dep of modulepreloads) {
+      const path = prefixed(dep);
+      link_header_preloads.add(`<${encodeURI(path)}>; rel="modulepreload"; nopush`);
+      if (state.prerendering) {
+        head += `
+	<link rel="modulepreload" href="${path}">`;
+      }
+    }
+    const attributes = ['type="module"', `data-sveltekit-hydrate="${target}"`];
+    csp.add_script(init_app);
+    if (csp.script_needs_nonce) {
+      attributes.push(`nonce="${csp.nonce}"`);
+    }
+    body += `
+		<script ${attributes.join(" ")}>${init_app}<\/script>`;
+  }
+  if (resolve_opts.ssr && page_config.hydrate) {
+    const serialized_data = [];
+    for (const { url, body: body2, response } of fetched) {
+      serialized_data.push(
+        render_json_payload_script(
+          { type: "data", url, body: typeof body2 === "string" ? hash(body2) : void 0 },
+          response
+        )
+      );
+    }
+    if (validation_errors) {
+      serialized_data.push(
+        render_json_payload_script({ type: "validation_errors" }, validation_errors)
+      );
+    }
+    body += `
+	${serialized_data.join("\n	")}`;
+  }
+  if (options.service_worker) {
+    csp.add_script(init_service_worker);
+    head += `
+			<script${csp.script_needs_nonce ? ` nonce="${csp.nonce}"` : ""}>${init_service_worker}<\/script>`;
+  }
+  if (state.prerendering) {
+    const http_equiv = [];
+    const csp_headers = csp.csp_provider.get_meta();
+    if (csp_headers) {
+      http_equiv.push(csp_headers);
+    }
+    if (state.prerendering.cache) {
+      http_equiv.push(`<meta http-equiv="cache-control" content="${state.prerendering.cache}">`);
+    }
+    if (http_equiv.length > 0) {
+      head = http_equiv.join("\n") + head;
+    }
+  }
+  const html = await resolve_opts.transformPageChunk({
+    html: options.template({ head, body, assets: assets2, nonce: csp.nonce }),
+    done: true
+  }) || "";
+  const headers = new Headers({
+    "content-type": "text/html",
+    etag: `"${hash(html)}"`
+  });
+  if (!state.prerendering) {
+    const csp_header = csp.csp_provider.get_header();
+    if (csp_header) {
+      headers.set("content-security-policy", csp_header);
+    }
+    const report_only_header = csp.report_only_provider.get_header();
+    if (report_only_header) {
+      headers.set("content-security-policy-report-only", report_only_header);
+    }
+    for (const new_cookie of cookies) {
+      const { name, value, ...options2 } = new_cookie;
+      headers.append("set-cookie", cookie.serialize(name, value, options2));
+    }
+    if (link_header_preloads.size) {
+      headers.set("link", Array.from(link_header_preloads).join(", "));
+    }
+  }
+  if (error2 && options.dev && !(error2 instanceof HttpError)) {
+    error2.stack = stack;
+  }
+  return new Response(html, {
+    status,
+    headers
+  });
 }
 const absolute = /^([a-z]+:)?\/?\//;
 const scheme = /^[a-z]+:/;
@@ -927,611 +877,134 @@ function decode_params(params) {
   }
   return params;
 }
-class LoadURL extends URL {
-  get hash() {
-    throw new Error(
-      "url.hash is inaccessible from load. Consider accessing hash from the page store within the script tag of your component."
-    );
-  }
-}
-class PrerenderingURL extends URL {
-  get search() {
-    throw new Error("Cannot access url.search on a page with prerendering enabled");
-  }
-  get searchParams() {
-    throw new Error("Cannot access url.searchParams on a page with prerendering enabled");
-  }
-}
-const updated = {
-  ...readable(false),
-  check: () => false
-};
-async function render_response({
-  branch,
-  options,
-  state,
-  $session,
-  page_config,
-  status,
-  error: error2 = null,
-  event,
-  resolve_opts,
-  stuff
-}) {
-  var _a, _b;
-  if (state.prerendering) {
-    if (options.csp.mode === "nonce") {
-      throw new Error('Cannot use prerendering if config.kit.csp.mode === "nonce"');
-    }
-    if (options.template_contains_nonce) {
-      throw new Error("Cannot use prerendering if page template contains %sveltekit.nonce%");
-    }
-  }
-  const { entry } = options.manifest._;
-  const stylesheets = new Set(entry.stylesheets);
-  const modulepreloads = new Set(entry.imports);
-  const link_header_preloads = /* @__PURE__ */ new Set();
-  const inline_styles = /* @__PURE__ */ new Map();
-  const serialized_data = [];
-  let shadow_props;
-  let rendered;
-  let is_private = false;
-  let cache;
-  const stack = error2 == null ? void 0 : error2.stack;
-  if (options.dev && error2) {
-    error2.stack = options.get_stack(error2);
-  }
-  if (resolve_opts.ssr) {
-    const leaf = branch.at(-1);
-    if (leaf.loaded.status) {
-      status = leaf.loaded.status;
-    }
-    for (const { node, props: props2, loaded, fetched, uses_credentials } of branch) {
-      if (node.imports) {
-        node.imports.forEach((url) => modulepreloads.add(url));
-      }
-      if (node.stylesheets) {
-        node.stylesheets.forEach((url) => stylesheets.add(url));
-      }
-      if (node.inline_styles) {
-        Object.entries(await node.inline_styles()).forEach(([k, v]) => inline_styles.set(k, v));
-      }
-      if (fetched && page_config.hydrate)
-        serialized_data.push(...fetched);
-      if (props2)
-        shadow_props = props2;
-      cache = loaded == null ? void 0 : loaded.cache;
-      is_private = (_a = cache == null ? void 0 : cache.private) != null ? _a : uses_credentials;
-    }
-    const session = writable($session);
-    is_private = is_private || ((_b = cache == null ? void 0 : cache.private) != null ? _b : !!$session && Object.keys($session).length > 0);
-    const props = {
-      stores: {
-        page: writable(null),
-        navigating: writable(null),
-        session,
-        updated
+const tracked_url_properties = ["href", "pathname", "search", "searchParams", "toString", "toJSON"];
+function make_trackable(url, callback) {
+  const tracked = new URL(url);
+  for (const property of tracked_url_properties) {
+    let value = tracked[property];
+    Object.defineProperty(tracked, property, {
+      get() {
+        callback();
+        return value;
       },
-      page: {
-        error: error2,
-        params: event.params,
-        routeId: event.routeId,
-        status,
-        stuff,
-        url: state.prerendering ? new PrerenderingURL(event.url) : event.url
-      },
-      components: branch.map(({ node }) => node.module.default)
-    };
-    const print_error = (property, replacement) => {
-      Object.defineProperty(props.page, property, {
-        get: () => {
-          throw new Error(`$page.${property} has been replaced by $page.url.${replacement}`);
-        }
-      });
-    };
-    print_error("origin", "origin");
-    print_error("path", "pathname");
-    print_error("query", "searchParams");
-    for (let i = 0; i < branch.length; i += 1) {
-      props[`props_${i}`] = await branch[i].loaded.props;
-    }
-    rendered = options.root.render(props);
-  } else {
-    rendered = { head: "", html: "", css: { code: "", map: null } };
-  }
-  let { head, html: body } = rendered;
-  const csp = new Csp(options.csp, {
-    dev: options.dev,
-    prerender: !!state.prerendering
-  });
-  const target = hash(body);
-  const init_app = `
-		import { set_public_env, start } from ${s(options.prefix + entry.file)};
-
-		set_public_env(${s(options.public_env)});
-
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="${target}"]').parentNode,
-			paths: ${s(options.paths)},
-			session: ${try_serialize($session, (error3) => {
-    throw new Error(`Failed to serialize session data: ${error3.message}`);
-  })},
-			route: ${!!page_config.router},
-			spa: ${!resolve_opts.ssr},
-			trailing_slash: ${s(options.trailing_slash)},
-			hydrate: ${resolve_opts.ssr && page_config.hydrate ? `{
-				status: ${status},
-				error: ${error2 && serialize_error(error2, (e) => e.stack)},
-				nodes: [${branch.map(({ node }) => node.index).join(", ")}],
-				params: ${devalue(event.params)},
-				routeId: ${s(event.routeId)}
-			}` : "null"}
-		});
-	`;
-  const init_service_worker = `
-		if ('serviceWorker' in navigator) {
-			addEventListener('load', function () {
-				navigator.serviceWorker.register('${options.service_worker}');
-			});
-		}
-	`;
-  if (inline_styles.size > 0) {
-    const content = Array.from(inline_styles.values()).join("\n");
-    const attributes = [];
-    if (options.dev)
-      attributes.push(" data-sveltekit");
-    if (csp.style_needs_nonce)
-      attributes.push(` nonce="${csp.nonce}"`);
-    csp.add_style(content);
-    head += `
-	<style${attributes.join("")}>${content}</style>`;
-  }
-  for (const dep of stylesheets) {
-    const path = options.prefix + dep;
-    const attributes = [];
-    if (csp.style_needs_nonce) {
-      attributes.push(`nonce="${csp.nonce}"`);
-    }
-    if (inline_styles.has(dep)) {
-      attributes.push("disabled", 'media="(max-width: 0)"');
-    } else {
-      const preload_atts = ['rel="preload"', 'as="style"'].concat(attributes);
-      link_header_preloads.add(`<${encodeURI(path)}>; ${preload_atts.join(";")}; nopush`);
-    }
-    attributes.unshift('rel="stylesheet"');
-    head += `
-	<link href="${path}" ${attributes.join(" ")}>`;
-  }
-  if (page_config.router || page_config.hydrate) {
-    for (const dep of modulepreloads) {
-      const path = options.prefix + dep;
-      link_header_preloads.add(`<${encodeURI(path)}>; rel="modulepreload"; nopush`);
-      if (state.prerendering) {
-        head += `
-	<link rel="modulepreload" href="${path}">`;
-      }
-    }
-    const attributes = ['type="module"', `data-sveltekit-hydrate="${target}"`];
-    csp.add_script(init_app);
-    if (csp.script_needs_nonce) {
-      attributes.push(`nonce="${csp.nonce}"`);
-    }
-    body += `
-		<script ${attributes.join(" ")}>${init_app}<\/script>`;
-    body += serialized_data.map(
-      ({ url, body: body2, response }) => render_json_payload_script(
-        { type: "data", url, body: typeof body2 === "string" ? hash(body2) : void 0 },
-        response
-      )
-    ).join("\n	");
-    if (shadow_props) {
-      body += render_json_payload_script({ type: "props" }, shadow_props);
-    }
-  }
-  if (options.service_worker) {
-    csp.add_script(init_service_worker);
-    head += `
-			<script${csp.script_needs_nonce ? ` nonce="${csp.nonce}"` : ""}>${init_service_worker}<\/script>`;
-  }
-  if (state.prerendering) {
-    const http_equiv = [];
-    const csp_headers = csp.csp_provider.get_meta();
-    if (csp_headers) {
-      http_equiv.push(csp_headers);
-    }
-    if (cache) {
-      http_equiv.push(`<meta http-equiv="cache-control" content="max-age=${cache.maxage}">`);
-    }
-    if (http_equiv.length > 0) {
-      head = http_equiv.join("\n") + head;
-    }
-  }
-  const segments = event.url.pathname.slice(options.paths.base.length).split("/").slice(2);
-  const assets2 = options.paths.assets || (segments.length > 0 ? segments.map(() => "..").join("/") : ".");
-  const html = await resolve_opts.transformPageChunk({
-    html: options.template({ head, body, assets: assets2, nonce: csp.nonce }),
-    done: true
-  }) || "";
-  const headers = new Headers({
-    "content-type": "text/html",
-    etag: `"${hash(html)}"`
-  });
-  if (link_header_preloads.size) {
-    headers.set("link", Array.from(link_header_preloads).join(", "));
-  }
-  if (cache) {
-    headers.set("cache-control", `${is_private ? "private" : "public"}, max-age=${cache.maxage}`);
-  }
-  if (!state.prerendering) {
-    const csp_header = csp.csp_provider.get_header();
-    if (csp_header) {
-      headers.set("content-security-policy", csp_header);
-    }
-    const report_only_header = csp.report_only_provider.get_header();
-    if (report_only_header) {
-      headers.set("content-security-policy-report-only", report_only_header);
-    }
-  }
-  if (options.dev && error2) {
-    error2.stack = stack;
-  }
-  return new Response(html, {
-    status,
-    headers
-  });
-}
-function try_serialize(data, fail) {
-  try {
-    return devalue(data);
-  } catch (err) {
-    if (fail)
-      fail(coalesce_to_error(err));
-    return null;
-  }
-}
-/*!
- * cookie
- * Copyright(c) 2012-2014 Roman Shtylman
- * Copyright(c) 2015 Douglas Christopher Wilson
- * MIT Licensed
- */
-var parse_1 = parse$1;
-var serialize_1 = serialize;
-var __toString = Object.prototype.toString;
-var fieldContentRegExp = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
-function parse$1(str, options) {
-  if (typeof str !== "string") {
-    throw new TypeError("argument str must be a string");
-  }
-  var obj = {};
-  var opt = options || {};
-  var dec = opt.decode || decode;
-  var index = 0;
-  while (index < str.length) {
-    var eqIdx = str.indexOf("=", index);
-    if (eqIdx === -1) {
-      break;
-    }
-    var endIdx = str.indexOf(";", index);
-    if (endIdx === -1) {
-      endIdx = str.length;
-    } else if (endIdx < eqIdx) {
-      index = str.lastIndexOf(";", eqIdx - 1) + 1;
-      continue;
-    }
-    var key2 = str.slice(index, eqIdx).trim();
-    if (void 0 === obj[key2]) {
-      var val = str.slice(eqIdx + 1, endIdx).trim();
-      if (val.charCodeAt(0) === 34) {
-        val = val.slice(1, -1);
-      }
-      obj[key2] = tryDecode(val, dec);
-    }
-    index = endIdx + 1;
-  }
-  return obj;
-}
-function serialize(name, val, options) {
-  var opt = options || {};
-  var enc = opt.encode || encode;
-  if (typeof enc !== "function") {
-    throw new TypeError("option encode is invalid");
-  }
-  if (!fieldContentRegExp.test(name)) {
-    throw new TypeError("argument name is invalid");
-  }
-  var value = enc(val);
-  if (value && !fieldContentRegExp.test(value)) {
-    throw new TypeError("argument val is invalid");
-  }
-  var str = name + "=" + value;
-  if (null != opt.maxAge) {
-    var maxAge = opt.maxAge - 0;
-    if (isNaN(maxAge) || !isFinite(maxAge)) {
-      throw new TypeError("option maxAge is invalid");
-    }
-    str += "; Max-Age=" + Math.floor(maxAge);
-  }
-  if (opt.domain) {
-    if (!fieldContentRegExp.test(opt.domain)) {
-      throw new TypeError("option domain is invalid");
-    }
-    str += "; Domain=" + opt.domain;
-  }
-  if (opt.path) {
-    if (!fieldContentRegExp.test(opt.path)) {
-      throw new TypeError("option path is invalid");
-    }
-    str += "; Path=" + opt.path;
-  }
-  if (opt.expires) {
-    var expires = opt.expires;
-    if (!isDate(expires) || isNaN(expires.valueOf())) {
-      throw new TypeError("option expires is invalid");
-    }
-    str += "; Expires=" + expires.toUTCString();
-  }
-  if (opt.httpOnly) {
-    str += "; HttpOnly";
-  }
-  if (opt.secure) {
-    str += "; Secure";
-  }
-  if (opt.priority) {
-    var priority = typeof opt.priority === "string" ? opt.priority.toLowerCase() : opt.priority;
-    switch (priority) {
-      case "low":
-        str += "; Priority=Low";
-        break;
-      case "medium":
-        str += "; Priority=Medium";
-        break;
-      case "high":
-        str += "; Priority=High";
-        break;
-      default:
-        throw new TypeError("option priority is invalid");
-    }
-  }
-  if (opt.sameSite) {
-    var sameSite = typeof opt.sameSite === "string" ? opt.sameSite.toLowerCase() : opt.sameSite;
-    switch (sameSite) {
-      case true:
-        str += "; SameSite=Strict";
-        break;
-      case "lax":
-        str += "; SameSite=Lax";
-        break;
-      case "strict":
-        str += "; SameSite=Strict";
-        break;
-      case "none":
-        str += "; SameSite=None";
-        break;
-      default:
-        throw new TypeError("option sameSite is invalid");
-    }
-  }
-  return str;
-}
-function decode(str) {
-  return str.indexOf("%") !== -1 ? decodeURIComponent(str) : str;
-}
-function encode(val) {
-  return encodeURIComponent(val);
-}
-function isDate(val) {
-  return __toString.call(val) === "[object Date]" || val instanceof Date;
-}
-function tryDecode(str, decode2) {
-  try {
-    return decode2(str);
-  } catch (e) {
-    return str;
-  }
-}
-var setCookie = { exports: {} };
-var defaultParseOptions = {
-  decodeValues: true,
-  map: false,
-  silent: false
-};
-function isNonEmptyString(str) {
-  return typeof str === "string" && !!str.trim();
-}
-function parseString(setCookieValue, options) {
-  var parts = setCookieValue.split(";").filter(isNonEmptyString);
-  var nameValue = parts.shift().split("=");
-  var name = nameValue.shift();
-  var value = nameValue.join("=");
-  options = options ? Object.assign({}, defaultParseOptions, options) : defaultParseOptions;
-  try {
-    value = options.decodeValues ? decodeURIComponent(value) : value;
-  } catch (e) {
-    console.error(
-      "set-cookie-parser encountered an error while decoding a cookie with value '" + value + "'. Set options.decodeValues to false to disable this feature.",
-      e
-    );
-  }
-  var cookie = {
-    name,
-    value
-  };
-  parts.forEach(function(part) {
-    var sides = part.split("=");
-    var key2 = sides.shift().trimLeft().toLowerCase();
-    var value2 = sides.join("=");
-    if (key2 === "expires") {
-      cookie.expires = new Date(value2);
-    } else if (key2 === "max-age") {
-      cookie.maxAge = parseInt(value2, 10);
-    } else if (key2 === "secure") {
-      cookie.secure = true;
-    } else if (key2 === "httponly") {
-      cookie.httpOnly = true;
-    } else if (key2 === "samesite") {
-      cookie.sameSite = value2;
-    } else {
-      cookie[key2] = value2;
-    }
-  });
-  return cookie;
-}
-function parse(input, options) {
-  options = options ? Object.assign({}, defaultParseOptions, options) : defaultParseOptions;
-  if (!input) {
-    if (!options.map) {
-      return [];
-    } else {
-      return {};
-    }
-  }
-  if (input.headers && input.headers["set-cookie"]) {
-    input = input.headers["set-cookie"];
-  } else if (input.headers) {
-    var sch = input.headers[Object.keys(input.headers).find(function(key2) {
-      return key2.toLowerCase() === "set-cookie";
-    })];
-    if (!sch && input.headers.cookie && !options.silent) {
-      console.warn(
-        "Warning: set-cookie-parser appears to have been called on a request object. It is designed to parse Set-Cookie headers from responses, not Cookie headers from requests. Set the option {silent: true} to suppress this warning."
-      );
-    }
-    input = sch;
-  }
-  if (!Array.isArray(input)) {
-    input = [input];
-  }
-  options = options ? Object.assign({}, defaultParseOptions, options) : defaultParseOptions;
-  if (!options.map) {
-    return input.filter(isNonEmptyString).map(function(str) {
-      return parseString(str, options);
+      enumerable: true,
+      configurable: true
     });
-  } else {
-    var cookies = {};
-    return input.filter(isNonEmptyString).reduce(function(cookies2, str) {
-      var cookie = parseString(str, options);
-      cookies2[cookie.name] = cookie;
-      return cookies2;
-    }, cookies);
   }
+  tracked[Symbol.for("nodejs.util.inspect.custom")] = (depth, opts, inspect) => {
+    return inspect(url, opts);
+  };
+  disable_hash(tracked);
+  return tracked;
 }
-function splitCookiesString(cookiesString) {
-  if (Array.isArray(cookiesString)) {
-    return cookiesString;
-  }
-  if (typeof cookiesString !== "string") {
-    return [];
-  }
-  var cookiesStrings = [];
-  var pos = 0;
-  var start;
-  var ch;
-  var lastComma;
-  var nextStart;
-  var cookiesSeparatorFound;
-  function skipWhitespace() {
-    while (pos < cookiesString.length && /\s/.test(cookiesString.charAt(pos))) {
-      pos += 1;
-    }
-    return pos < cookiesString.length;
-  }
-  function notSpecialChar() {
-    ch = cookiesString.charAt(pos);
-    return ch !== "=" && ch !== ";" && ch !== ",";
-  }
-  while (pos < cookiesString.length) {
-    start = pos;
-    cookiesSeparatorFound = false;
-    while (skipWhitespace()) {
-      ch = cookiesString.charAt(pos);
-      if (ch === ",") {
-        lastComma = pos;
-        pos += 1;
-        skipWhitespace();
-        nextStart = pos;
-        while (pos < cookiesString.length && notSpecialChar()) {
-          pos += 1;
-        }
-        if (pos < cookiesString.length && cookiesString.charAt(pos) === "=") {
-          cookiesSeparatorFound = true;
-          pos = nextStart;
-          cookiesStrings.push(cookiesString.substring(start, lastComma));
-          start = pos;
-        } else {
-          pos = lastComma + 1;
-        }
-      } else {
-        pos += 1;
-      }
-    }
-    if (!cookiesSeparatorFound || pos >= cookiesString.length) {
-      cookiesStrings.push(cookiesString.substring(start, cookiesString.length));
-    }
-  }
-  return cookiesStrings;
-}
-setCookie.exports = parse;
-setCookie.exports.parse = parse;
-var parseString_1 = setCookie.exports.parseString = parseString;
-var splitCookiesString_1 = setCookie.exports.splitCookiesString = splitCookiesString;
-function normalize(loaded) {
-  if (!loaded) {
-    return {};
-  }
-  if (loaded.fallthrough) {
-    throw new Error(
-      "fallthrough is no longer supported. Use matchers instead: https://kit.svelte.dev/docs/routing#advanced-routing-matching"
-    );
-  }
-  if ("maxage" in loaded) {
-    throw new Error("maxage should be replaced with cache: { maxage }");
-  }
-  const has_error_status = loaded.status && loaded.status >= 400 && loaded.status <= 599 && !loaded.redirect;
-  if (loaded.error || has_error_status) {
-    const status = loaded.status;
-    if (!loaded.error && has_error_status) {
-      return {
-        status: status || 500,
-        error: new Error(`${status}`)
-      };
-    }
-    const error2 = typeof loaded.error === "string" ? new Error(loaded.error) : loaded.error;
-    if (!(error2 instanceof Error)) {
-      return {
-        status: 500,
-        error: new Error(
-          `"error" property returned from load() must be a string or instance of Error, received type "${typeof error2}"`
-        )
-      };
-    }
-    if (!status || status < 400 || status > 599) {
-      console.warn('"error" returned from load() without a valid status code \u2014 defaulting to 500');
-      return { status: 500, error: error2 };
-    }
-    return { status, error: error2 };
-  }
-  if (loaded.redirect) {
-    if (!loaded.status || Math.floor(loaded.status / 100) !== 3) {
+function disable_hash(url) {
+  Object.defineProperty(url, "hash", {
+    get() {
       throw new Error(
-        '"redirect" property returned from load() must be accompanied by a 3xx status code'
+        "Cannot access event.url.hash. Consider using `$page.url.hash` inside a component instead"
       );
     }
-    if (typeof loaded.redirect !== "string") {
-      throw new Error('"redirect" property returned from load() must be a string');
+  });
+}
+function disable_search(url) {
+  for (const property of ["search", "searchParams"]) {
+    Object.defineProperty(url, property, {
+      get() {
+        throw new Error(`Cannot access url.${property} on a page with prerendering enabled`);
+      }
+    });
+  }
+}
+async function load_server_data({ event, state, node, parent }) {
+  var _a;
+  if (!(node == null ? void 0 : node.server))
+    return null;
+  const uses = {
+    dependencies: /* @__PURE__ */ new Set(),
+    params: /* @__PURE__ */ new Set(),
+    parent: false,
+    url: false
+  };
+  const url = make_trackable(event.url, () => {
+    uses.url = true;
+  });
+  if (state.prerendering) {
+    disable_search(url);
+  }
+  const result = await ((_a = node.server.load) == null ? void 0 : _a.call(null, {
+    ...event,
+    depends: (...deps) => {
+      for (const dep of deps) {
+        const { href } = new URL(dep, event.url);
+        uses.dependencies.add(href);
+      }
+    },
+    params: new Proxy(event.params, {
+      get: (target, key2) => {
+        uses.params.add(key2);
+        return target[key2];
+      }
+    }),
+    parent: async () => {
+      uses.parent = true;
+      return parent();
+    },
+    url
+  }));
+  const data = result ? await unwrap_promises(result) : null;
+  return {
+    type: "data",
+    data,
+    uses: {
+      dependencies: uses.dependencies.size > 0 ? Array.from(uses.dependencies) : void 0,
+      params: uses.params.size > 0 ? Array.from(uses.params) : void 0,
+      parent: uses.parent ? 1 : void 0,
+      url: uses.url ? 1 : void 0
     }
+  };
+}
+async function load_data({ event, fetcher, node, parent, server_data_promise }) {
+  var _a;
+  const server_data_node = await server_data_promise;
+  if (!((_a = node == null ? void 0 : node.shared) == null ? void 0 : _a.load)) {
+    return (server_data_node == null ? void 0 : server_data_node.data) ?? null;
   }
-  if (loaded.dependencies) {
-    if (!Array.isArray(loaded.dependencies) || loaded.dependencies.some((dep) => typeof dep !== "string")) {
-      throw new Error('"dependencies" property returned from load() must be of type string[]');
+  const load_event = {
+    url: event.url,
+    params: event.params,
+    data: (server_data_node == null ? void 0 : server_data_node.data) ?? null,
+    routeId: event.routeId,
+    fetch: fetcher,
+    setHeaders: event.setHeaders,
+    depends: () => {
+    },
+    parent
+  };
+  Object.defineProperties(load_event, {
+    session: {
+      get() {
+        throw new Error(
+          "session is no longer available. See https://github.com/sveltejs/kit/discussions/5883"
+        );
+      },
+      enumerable: false
     }
+  });
+  const data = await node.shared.load.call(null, load_event);
+  return data ? unwrap_promises(data) : null;
+}
+async function unwrap_promises(object) {
+  const unwrapped = {};
+  for (const key2 in object) {
+    unwrapped[key2] = await object[key2];
   }
-  if (loaded.context) {
-    throw new Error(
-      'You are returning "context" from a load function. "context" was renamed to "stuff", please adjust your code accordingly.'
-    );
-  }
-  return loaded;
+  return unwrapped;
+}
+function coalesce_to_error(err) {
+  return err instanceof Error || err && err.name && err.message ? err : new Error(JSON.stringify(err));
+}
+function normalize_error(error2) {
+  return error2;
 }
 function domain_matches(hostname, constraint) {
   if (!constraint)
@@ -1549,432 +1022,219 @@ function path_matches(path, constraint) {
     return true;
   return path.startsWith(normalized + "/");
 }
-async function load_node({
-  event,
-  options,
-  state,
-  route,
-  node,
-  $session,
-  stuff,
-  is_error,
-  is_leaf,
-  status,
-  error: error2
-}) {
-  var _a, _b, _c;
-  const { module: module2 } = node;
-  let uses_credentials = false;
+function create_fetch({ event, options, state, route }) {
   const fetched = [];
-  const cookies = parse_1(event.request.headers.get("cookie") || "");
-  const new_cookies = [];
-  let loaded;
-  const should_prerender = (_a = node.module.prerender) != null ? _a : options.prerender.default;
-  const shadow = is_leaf ? await load_shadow_data(
-    route,
-    event,
-    options,
-    should_prerender
-  ) : {};
-  if (shadow.cookies) {
-    shadow.cookies.forEach((header) => {
-      new_cookies.push(parseString_1(header));
-    });
-  }
-  if (shadow.error) {
-    loaded = {
-      error: shadow.error
-    };
-  } else if (shadow.redirect) {
-    loaded = {
-      redirect: shadow.redirect
-    };
-  } else if (module2.load) {
-    const load_input = {
-      url: state.prerendering ? new PrerenderingURL(event.url) : new LoadURL(event.url),
-      params: event.params,
-      props: shadow.body || {},
-      routeId: event.routeId,
-      get session() {
-        var _a2;
-        if ((_a2 = node.module.prerender) != null ? _a2 : options.prerender.default) {
-          throw Error(
-            "Attempted to access session from a prerendered page. Session would never be populated."
-          );
-        }
-        uses_credentials = true;
-        return $session;
-      },
-      fetch: async (resource, opts = {}) => {
-        let requested;
-        if (typeof resource === "string") {
-          requested = resource;
-        } else {
-          requested = resource.url;
-          opts = {
-            method: resource.method,
-            headers: resource.headers,
-            body: resource.body,
-            mode: resource.mode,
-            credentials: resource.credentials,
-            cache: resource.cache,
-            redirect: resource.redirect,
-            referrer: resource.referrer,
-            integrity: resource.integrity,
-            ...opts
-          };
-        }
-        opts.headers = new Headers(opts.headers);
-        for (const [key2, value] of event.request.headers) {
-          if (key2 !== "authorization" && key2 !== "connection" && key2 !== "cookie" && key2 !== "host" && key2 !== "if-none-match" && !opts.headers.has(key2)) {
-            opts.headers.set(key2, value);
-          }
-        }
-        const resolved = resolve(event.url.pathname, requested.split("?")[0]);
-        let response;
-        let dependency;
-        const prefix = options.paths.assets || options.paths.base;
-        const filename = decodeURIComponent(
-          resolved.startsWith(prefix) ? resolved.slice(prefix.length) : resolved
-        ).slice(1);
-        const filename_html = `${filename}/index.html`;
-        const is_asset = options.manifest.assets.has(filename);
-        const is_asset_html = options.manifest.assets.has(filename_html);
-        if (is_asset || is_asset_html) {
-          const file = is_asset ? filename : filename_html;
-          if (options.read) {
-            const type = is_asset ? options.manifest.mimeTypes[filename.slice(filename.lastIndexOf("."))] : "text/html";
-            response = new Response(options.read(file), {
-              headers: type ? { "content-type": type } : {}
-            });
-          } else {
-            response = await fetch(
-              `${event.url.origin}/${file}`,
-              opts
-            );
-          }
-        } else if (is_root_relative(resolved)) {
-          if (opts.credentials !== "omit") {
-            uses_credentials = true;
-            const authorization = event.request.headers.get("authorization");
-            const combined_cookies = { ...cookies };
-            for (const cookie2 of new_cookies) {
-              if (!domain_matches(event.url.hostname, cookie2.domain))
-                continue;
-              if (!path_matches(resolved, cookie2.path))
-                continue;
-              combined_cookies[cookie2.name] = cookie2.value;
-            }
-            const cookie = Object.entries(combined_cookies).map(([name, value]) => `${name}=${value}`).join("; ");
-            if (cookie) {
-              opts.headers.set("cookie", cookie);
-            }
-            if (authorization && !opts.headers.has("authorization")) {
-              opts.headers.set("authorization", authorization);
-            }
-          }
-          if (opts.body && typeof opts.body !== "string") {
-            throw new Error("Request body must be a string");
-          }
-          response = await respond(
-            new Request(new URL(requested, event.url).href, { ...opts }),
-            options,
-            {
-              ...state,
-              initiator: route
-            }
-          );
-          if (state.prerendering) {
-            dependency = { response, body: null };
-            state.prerendering.dependencies.set(resolved, dependency);
-          }
-        } else {
-          if (resolved.startsWith("//")) {
-            requested = event.url.protocol + requested;
-          }
-          if (`.${new URL(requested).hostname}`.endsWith(`.${event.url.hostname}`) && opts.credentials !== "omit") {
-            uses_credentials = true;
-            const cookie = event.request.headers.get("cookie");
-            if (cookie)
-              opts.headers.set("cookie", cookie);
-          }
-          opts.headers.delete("connection");
-          const external_request = new Request(requested, opts);
-          response = await options.hooks.externalFetch.call(null, external_request);
-        }
-        const set_cookie = response.headers.get("set-cookie");
-        if (set_cookie) {
-          new_cookies.push(
-            ...splitCookiesString_1(set_cookie).map((str) => parseString_1(str))
-          );
-        }
-        const proxy = new Proxy(response, {
-          get(response2, key2, _receiver) {
-            async function text() {
-              const body = await response2.text();
-              const headers = {};
-              for (const [key3, value] of response2.headers) {
-                if (key3 !== "set-cookie" && key3 !== "etag") {
-                  headers[key3] = value;
-                }
-              }
-              if (!opts.body || typeof opts.body === "string") {
-                const status_number = Number(response2.status);
-                if (isNaN(status_number)) {
-                  throw new Error(
-                    `response.status is not a number. value: "${response2.status}" type: ${typeof response2.status}`
-                  );
-                }
-                fetched.push({
-                  url: requested,
-                  body: opts.body,
-                  response: {
-                    status: status_number,
-                    statusText: response2.statusText,
-                    headers,
-                    body
-                  }
-                });
-              }
-              if (dependency) {
-                dependency.body = body;
-              }
-              return body;
-            }
-            if (key2 === "arrayBuffer") {
-              return async () => {
-                const buffer = await response2.arrayBuffer();
-                if (dependency) {
-                  dependency.body = new Uint8Array(buffer);
-                }
-                return buffer;
-              };
-            }
-            if (key2 === "text") {
-              return text;
-            }
-            if (key2 === "json") {
-              return async () => {
-                return JSON.parse(await text());
-              };
-            }
-            return Reflect.get(response2, key2, response2);
-          }
-        });
-        return proxy;
-      },
-      stuff: { ...stuff },
-      status: (_b = is_error ? status : shadow.status) != null ? _b : null,
-      error: is_error ? error2 != null ? error2 : null : null
-    };
-    if (options.dev) {
-      Object.defineProperty(load_input, "page", {
-        get: () => {
-          throw new Error("`page` in `load` functions has been replaced by `url` and `params`");
-        }
-      });
-    }
-    loaded = normalize(await module2.load.call(null, load_input));
-  } else if (shadow.body) {
-    loaded = {
-      props: shadow.body
-    };
-  } else {
-    loaded = {};
-  }
-  loaded.status = (_c = loaded.status) != null ? _c : shadow.status;
-  if (shadow.body && state.prerendering) {
-    const pathname = `${event.url.pathname.replace(/\/$/, "")}/__data.json`;
-    const dependency = {
-      response: new Response(void 0),
-      body: JSON.stringify(shadow.body)
-    };
-    state.prerendering.dependencies.set(pathname, dependency);
-  }
-  return {
-    node,
-    props: shadow.body,
-    loaded,
-    stuff: loaded.stuff || stuff,
-    fetched,
-    set_cookie_headers: new_cookies.map((new_cookie) => {
-      const { name, value, ...options2 } = new_cookie;
-      return serialize_1(name, value, options2);
-    }),
-    uses_credentials
-  };
-}
-async function load_shadow_data(route, event, options, prerender) {
-  if (!route.shadow)
-    return {};
-  try {
-    const mod = await route.shadow();
-    check_method_names(mod);
-    if (prerender && (mod.POST || mod.PUT || mod.DELETE || mod.PATCH)) {
-      throw new Error("Cannot prerender pages that have endpoints with mutative methods");
-    }
-    const { method } = event.request;
-    const is_get = method === "HEAD" || method === "GET";
-    const handler = method === "HEAD" ? mod.HEAD || mod.GET : mod[method];
-    if (!handler && !is_get) {
-      return {
-        status: 405,
-        error: new Error(`${method} method not allowed`)
+  const initial_cookies = cookie.parse(event.request.headers.get("cookie") || "");
+  const cookies = [];
+  const fetcher = async (resource, opts = {}) => {
+    let requested;
+    if (typeof resource === "string" || resource instanceof URL) {
+      requested = resource.toString();
+    } else {
+      requested = resource.url;
+      opts = {
+        method: resource.method,
+        headers: resource.headers,
+        body: resource.body,
+        mode: resource.mode,
+        credentials: resource.credentials,
+        cache: resource.cache,
+        redirect: resource.redirect,
+        referrer: resource.referrer,
+        integrity: resource.integrity,
+        ...opts
       };
     }
-    const data = {
-      status: void 0,
-      cookies: [],
-      body: {}
-    };
-    if (!is_get) {
-      const { status, headers, body } = validate_shadow_output(await handler(event));
-      add_cookies(data.cookies, headers);
-      data.status = status;
-      if (body instanceof Error) {
-        if (status < 400) {
-          data.status = 500;
-          data.error = new Error("A non-error status code was returned with an error body");
-        } else {
-          data.error = body;
-        }
-        return data;
+    opts.headers = new Headers(opts.headers);
+    for (const [key2, value] of event.request.headers) {
+      if (key2 !== "authorization" && key2 !== "connection" && key2 !== "content-length" && key2 !== "cookie" && key2 !== "host" && key2 !== "if-none-match" && !opts.headers.has(key2)) {
+        opts.headers.set(key2, value);
       }
-      if (status >= 300 && status < 400) {
-        data.redirect = headers instanceof Headers ? headers.get("location") : headers.location;
-        return data;
-      }
-      data.body = body;
     }
-    const get = method === "HEAD" && mod.HEAD || mod.GET;
-    if (get) {
-      const { status, headers, body } = validate_shadow_output(await get(event));
-      add_cookies(data.cookies, headers);
-      if (body instanceof Error) {
-        if (status < 400) {
-          data.status = 500;
-          data.error = new Error("A non-error status code was returned with an error body");
-        } else {
-          data.status = status;
-          data.error = body;
+    const resolved = resolve(event.url.pathname, requested.split("?")[0]);
+    let response;
+    let dependency;
+    const prefix = options.paths.assets || options.paths.base;
+    const filename = decodeURIComponent(
+      resolved.startsWith(prefix) ? resolved.slice(prefix.length) : resolved
+    ).slice(1);
+    const filename_html = `${filename}/index.html`;
+    const is_asset = options.manifest.assets.has(filename);
+    const is_asset_html = options.manifest.assets.has(filename_html);
+    if (is_asset || is_asset_html) {
+      const file = is_asset ? filename : filename_html;
+      if (options.read) {
+        const type = is_asset ? options.manifest.mimeTypes[filename.slice(filename.lastIndexOf("."))] : "text/html";
+        response = new Response(options.read(file), {
+          headers: type ? { "content-type": type } : {}
+        });
+      } else {
+        response = await fetch(`${event.url.origin}/${file}`, opts);
+      }
+    } else if (is_root_relative(resolved)) {
+      if (opts.credentials !== "omit") {
+        const authorization = event.request.headers.get("authorization");
+        const combined_cookies = { ...initial_cookies };
+        for (const cookie3 of cookies) {
+          if (!domain_matches(event.url.hostname, cookie3.domain))
+            continue;
+          if (!path_matches(resolved, cookie3.path))
+            continue;
+          combined_cookies[cookie3.name] = cookie3.value;
         }
-        return data;
+        const cookie2 = Object.entries(combined_cookies).map(([name, value]) => `${name}=${value}`).join("; ");
+        if (cookie2) {
+          opts.headers.set("cookie", cookie2);
+        }
+        if (authorization && !opts.headers.has("authorization")) {
+          opts.headers.set("authorization", authorization);
+        }
       }
-      if (status >= 400) {
-        data.status = status;
-        data.error = new Error("Failed to load data");
-        return data;
+      if (opts.body && typeof opts.body !== "string") {
+        throw new Error("Request body must be a string");
       }
-      if (status >= 300) {
-        data.status = status;
-        data.redirect = headers instanceof Headers ? headers.get("location") : headers.location;
-        return data;
+      response = await respond(
+        new Request(new URL(requested, event.url).href, { ...opts }),
+        options,
+        {
+          ...state,
+          initiator: route
+        }
+      );
+      if (state.prerendering) {
+        dependency = { response, body: null };
+        state.prerendering.dependencies.set(resolved, dependency);
       }
-      data.body = { ...body, ...data.body };
-    }
-    return data;
-  } catch (e) {
-    const error2 = coalesce_to_error(e);
-    options.handle_error(error2, event);
-    return {
-      status: 500,
-      error: error2
-    };
-  }
-}
-function add_cookies(target, headers) {
-  const cookies = headers["set-cookie"];
-  if (cookies) {
-    if (Array.isArray(cookies)) {
-      target.push(...cookies);
     } else {
-      target.push(cookies);
+      if (resolved.startsWith("//")) {
+        requested = event.url.protocol + requested;
+      }
+      if (`.${new URL(requested).hostname}`.endsWith(`.${event.url.hostname}`) && opts.credentials !== "omit") {
+        const cookie2 = event.request.headers.get("cookie");
+        if (cookie2)
+          opts.headers.set("cookie", cookie2);
+      }
+      opts.headers.delete("connection");
+      const external_request = new Request(requested, opts);
+      response = await options.hooks.externalFetch.call(null, external_request);
     }
-  }
-}
-function validate_shadow_output(result) {
-  if (result.fallthrough) {
-    throw new Error(
-      "fallthrough is no longer supported. Use matchers instead: https://kit.svelte.dev/docs/routing#advanced-routing-matching"
-    );
-  }
-  const { status = 200, body = {} } = result;
-  let headers = result.headers || {};
-  if (headers instanceof Headers) {
-    if (headers.has("set-cookie")) {
-      throw new Error(
-        "Endpoint request handler cannot use Headers interface with Set-Cookie headers"
+    const set_cookie = response.headers.get("set-cookie");
+    if (set_cookie) {
+      cookies.push(
+        ...set_cookie_parser.splitCookiesString(set_cookie).map((str) => set_cookie_parser.parseString(str))
       );
     }
-  } else {
-    headers = lowercase_keys(headers);
-  }
-  if (!is_pojo(body)) {
-    throw new Error(
-      "Body returned from endpoint request handler must be a plain object or an Error"
-    );
-  }
-  return { status, headers, body };
+    const proxy = new Proxy(response, {
+      get(response2, key2, _receiver) {
+        async function text() {
+          const body = await response2.text();
+          const headers = {};
+          for (const [key3, value] of response2.headers) {
+            if (key3 !== "set-cookie" && key3 !== "etag") {
+              headers[key3] = value;
+            }
+          }
+          if (!opts.body || typeof opts.body === "string") {
+            const status_number = Number(response2.status);
+            if (isNaN(status_number)) {
+              throw new Error(
+                `response.status is not a number. value: "${response2.status}" type: ${typeof response2.status}`
+              );
+            }
+            fetched.push({
+              url: requested,
+              body: opts.body,
+              response: {
+                status: status_number,
+                statusText: response2.statusText,
+                headers,
+                body
+              }
+            });
+          }
+          if (dependency) {
+            dependency.body = body;
+          }
+          return body;
+        }
+        if (key2 === "arrayBuffer") {
+          return async () => {
+            const buffer = await response2.arrayBuffer();
+            if (dependency) {
+              dependency.body = new Uint8Array(buffer);
+            }
+            return buffer;
+          };
+        }
+        if (key2 === "text") {
+          return text;
+        }
+        if (key2 === "json") {
+          return async () => {
+            return JSON.parse(await text());
+          };
+        }
+        return Reflect.get(response2, key2, response2);
+      }
+    });
+    return proxy;
+  };
+  return { fetcher, fetched, cookies };
 }
-async function respond_with_error({
-  event,
-  options,
-  state,
-  $session,
-  status,
-  error: error2,
-  resolve_opts
-}) {
+async function respond_with_error({ event, options, state, status, error: error2, resolve_opts }) {
+  const { fetcher, fetched, cookies } = create_fetch({
+    event,
+    options,
+    state,
+    route: GENERIC_ERROR
+  });
   try {
     const branch = [];
-    let stuff = {};
     if (resolve_opts.ssr) {
       const default_layout = await options.manifest._.nodes[0]();
-      const default_error = await options.manifest._.nodes[1]();
-      const layout_loaded = await load_node({
+      const server_data_promise = load_server_data({
         event,
-        options,
         state,
-        route: GENERIC_ERROR,
         node: default_layout,
-        $session,
-        stuff: {},
-        is_error: false,
-        is_leaf: false
+        parent: async () => ({})
       });
-      if (layout_loaded.loaded.error) {
-        throw layout_loaded.loaded.error;
-      }
-      const error_loaded = await load_node({
+      const server_data = await server_data_promise;
+      const data = await load_data({
         event,
-        options,
-        state,
-        route: GENERIC_ERROR,
-        node: default_error,
-        $session,
-        stuff: layout_loaded ? layout_loaded.stuff : {},
-        is_error: true,
-        is_leaf: false,
-        status,
-        error: error2
+        fetcher,
+        node: default_layout,
+        parent: async () => ({}),
+        server_data_promise,
+        state
       });
-      branch.push(layout_loaded, error_loaded);
-      stuff = error_loaded.stuff;
+      branch.push(
+        {
+          node: default_layout,
+          server_data,
+          data
+        },
+        {
+          node: await options.manifest._.nodes[1](),
+          data: null,
+          server_data: null
+        }
+      );
     }
     return await render_response({
       options,
       state,
-      $session,
       page_config: {
         hydrate: options.hydrate,
         router: options.router
       },
-      stuff,
       status,
       error: error2,
       branch,
+      fetched,
+      cookies,
       event,
-      resolve_opts
+      resolve_opts,
+      validation_errors: void 0
     });
   } catch (err) {
     const error3 = coalesce_to_error(err);
@@ -1984,218 +1244,311 @@ async function respond_with_error({
     });
   }
 }
-async function respond$1(opts) {
+function error(status, message) {
+  return new HttpError(status, message);
+}
+function json(data, init2) {
+  const headers = new Headers(init2 == null ? void 0 : init2.headers);
+  if (!headers.has("content-type")) {
+    headers.set("content-type", "application/json");
+  }
+  return new Response(JSON.stringify(data), {
+    ...init2,
+    headers
+  });
+}
+function compact(arr) {
+  return arr.filter((val) => val != null);
+}
+const DATA_SUFFIX = "/__data.js";
+async function render_page(event, route, page, options, state, resolve_opts) {
   var _a, _b;
-  const { event, options, state, $session, route, resolve_opts } = opts;
-  let nodes;
-  if (!resolve_opts.ssr) {
-    return await render_response({
-      ...opts,
-      branch: [],
-      page_config: {
-        hydrate: true,
-        router: true
-      },
-      status: 200,
-      error: null,
-      event,
-      stuff: {}
-    });
-  }
-  try {
-    nodes = await Promise.all(
-      route.a.map((n) => n == void 0 ? n : options.manifest._.nodes[n]())
-    );
-  } catch (err) {
-    const error3 = coalesce_to_error(err);
-    options.handle_error(error3, event);
-    return await respond_with_error({
-      event,
-      options,
-      state,
-      $session,
-      status: 500,
-      error: error3,
-      resolve_opts
-    });
-  }
-  const leaf = nodes[nodes.length - 1].module;
-  let page_config = get_page_config(leaf, options);
-  if (state.prerendering) {
-    const should_prerender = (_a = leaf.prerender) != null ? _a : options.prerender.default;
-    if (!should_prerender) {
-      return new Response(void 0, {
-        status: 204
-      });
-    }
-  }
-  let branch = [];
-  let status = 200;
-  let error2 = null;
-  let set_cookie_headers = [];
-  let stuff = {};
-  ssr: {
-    for (let i = 0; i < nodes.length; i += 1) {
-      const node = nodes[i];
-      let loaded;
-      if (node) {
-        try {
-          loaded = await load_node({
-            ...opts,
-            node,
-            stuff,
-            is_error: false,
-            is_leaf: i === nodes.length - 1
-          });
-          set_cookie_headers = set_cookie_headers.concat(loaded.set_cookie_headers);
-          if (loaded.loaded.redirect) {
-            return with_cookies(
-              new Response(void 0, {
-                status: loaded.loaded.status,
-                headers: {
-                  location: loaded.loaded.redirect
-                }
-              }),
-              set_cookie_headers
-            );
-          }
-          if (loaded.loaded.error) {
-            error2 = loaded.loaded.error;
-            status = (_b = loaded.loaded.status) != null ? _b : 500;
-          }
-        } catch (err) {
-          const e = coalesce_to_error(err);
-          options.handle_error(e, event);
-          status = 500;
-          error2 = e;
-        }
-        if (loaded && !error2) {
-          branch.push(loaded);
-        }
-        if (error2) {
-          while (i--) {
-            if (route.b[i]) {
-              const index = route.b[i];
-              const error_node = await options.manifest._.nodes[index]();
-              let node_loaded;
-              let j = i;
-              while (!(node_loaded = branch[j])) {
-                j -= 1;
-              }
-              try {
-                const error_loaded = await load_node({
-                  ...opts,
-                  node: error_node,
-                  stuff: node_loaded.stuff,
-                  is_error: true,
-                  is_leaf: false,
-                  status,
-                  error: error2
-                });
-                if (error_loaded.loaded.error) {
-                  continue;
-                }
-                page_config = get_page_config(error_node.module, options);
-                branch = branch.slice(0, j + 1).concat(error_loaded);
-                stuff = { ...node_loaded.stuff, ...error_loaded.stuff };
-                break ssr;
-              } catch (err) {
-                const e = coalesce_to_error(err);
-                options.handle_error(e, event);
-                continue;
-              }
-            }
-          }
-          return with_cookies(
-            await respond_with_error({
-              event,
-              options,
-              state,
-              $session,
-              status,
-              error: error2,
-              resolve_opts
-            }),
-            set_cookie_headers
-          );
-        }
-      }
-      if (loaded && loaded.loaded.stuff) {
-        stuff = {
-          ...stuff,
-          ...loaded.loaded.stuff
-        };
-      }
-    }
-  }
-  try {
-    return with_cookies(
-      await render_response({
-        ...opts,
-        stuff,
-        event,
-        page_config,
-        status,
-        error: error2,
-        branch: branch.filter(Boolean)
-      }),
-      set_cookie_headers
-    );
-  } catch (err) {
-    const error3 = coalesce_to_error(err);
-    options.handle_error(error3, event);
-    return with_cookies(
-      await respond_with_error({
-        ...opts,
-        status: 500,
-        error: error3
-      }),
-      set_cookie_headers
-    );
-  }
-}
-function get_page_config(leaf, options) {
-  if ("ssr" in leaf) {
-    throw new Error(
-      "`export const ssr` has been removed \u2014 use the handle hook instead: https://kit.svelte.dev/docs/hooks#handle"
-    );
-  }
-  return {
-    router: "router" in leaf ? !!leaf.router : options.router,
-    hydrate: "hydrate" in leaf ? !!leaf.hydrate : options.hydrate
-  };
-}
-function with_cookies(response, set_cookie_headers) {
-  if (set_cookie_headers.length) {
-    set_cookie_headers.forEach((value) => {
-      response.headers.append("set-cookie", value);
-    });
-  }
-  return response;
-}
-async function render_page(event, route, options, state, resolve_opts) {
   if (state.initiator === route) {
     return new Response(`Not found: ${event.url.pathname}`, {
       status: 404
     });
   }
-  if (route.shadow) {
-    const type = negotiate(event.request.headers.get("accept") || "text/html", [
-      "text/html",
-      "application/json"
-    ]);
-    if (type === "application/json") {
-      return render_endpoint(event, await route.shadow(), options);
+  const accept = negotiate(event.request.headers.get("accept") || "text/html", [
+    "text/html",
+    "application/json"
+  ]);
+  if (accept === "application/json" && event.request.method !== "GET" && event.request.method !== "HEAD") {
+    const node = await options.manifest._.nodes[page.leaf]();
+    if (node.server) {
+      return handle_json_request(event, options, node.server);
     }
   }
-  const $session = await options.hooks.getSession(event);
-  return respond$1({
-    event,
-    options,
-    state,
-    $session,
-    resolve_opts,
-    route
+  const { fetcher, fetched, cookies } = create_fetch({ event, options, state, route });
+  try {
+    const nodes = await Promise.all([
+      ...page.layouts.map((n) => n == void 0 ? n : options.manifest._.nodes[n]()),
+      options.manifest._.nodes[page.leaf]()
+    ]);
+    const leaf_node = nodes.at(-1);
+    let status = 200;
+    let mutation_error;
+    let validation_errors;
+    if (leaf_node.server && event.request.method !== "GET" && event.request.method !== "HEAD") {
+      try {
+        const method = event.request.method;
+        const handler = leaf_node.server[method];
+        if (handler) {
+          const result = await handler.call(null, event);
+          if (result == null ? void 0 : result.errors) {
+            validation_errors = result.errors;
+            status = result.status ?? 400;
+          }
+          if (event.request.method === "POST" && (result == null ? void 0 : result.location)) {
+            return redirect_response(303, result.location);
+          }
+        } else {
+          event.setHeaders({
+            allow: allowed_methods(leaf_node.server).join(", ")
+          });
+          mutation_error = error(405, "Method not allowed");
+        }
+      } catch (e) {
+        if (e instanceof Redirect) {
+          return redirect_response(e.status, e.location);
+        }
+        mutation_error = e;
+      }
+    }
+    const should_prerender_data = nodes.some((node) => node == null ? void 0 : node.server);
+    const data_pathname = event.url.pathname.replace(/\/$/, "") + DATA_SUFFIX;
+    const should_prerender = ((_a = leaf_node.shared) == null ? void 0 : _a.prerender) ?? ((_b = leaf_node.server) == null ? void 0 : _b.prerender) ?? options.prerender.default;
+    if (should_prerender) {
+      const mod = leaf_node.server;
+      if (mod && (mod.POST || mod.PUT || mod.DELETE || mod.PATCH)) {
+        throw new Error("Cannot prerender pages that have endpoints with mutative methods");
+      }
+    } else if (state.prerendering) {
+      if (!should_prerender) {
+        return new Response(void 0, {
+          status: 204
+        });
+      }
+    }
+    if (!resolve_opts.ssr) {
+      return await render_response({
+        branch: [],
+        validation_errors: void 0,
+        fetched,
+        cookies,
+        page_config: {
+          hydrate: true,
+          router: true
+        },
+        status,
+        error: null,
+        event,
+        options,
+        state,
+        resolve_opts
+      });
+    }
+    let branch = [];
+    let load_error = null;
+    const server_promises = nodes.map((node, i) => {
+      if (load_error) {
+        throw load_error;
+      }
+      return Promise.resolve().then(async () => {
+        try {
+          if (node === leaf_node && mutation_error) {
+            throw mutation_error;
+          }
+          return await load_server_data({
+            event,
+            state,
+            node,
+            parent: async () => {
+              const data = {};
+              for (let j = 0; j < i; j += 1) {
+                const parent = await server_promises[j];
+                if (parent)
+                  Object.assign(data, await parent.data);
+              }
+              return data;
+            }
+          });
+        } catch (e) {
+          load_error = e;
+          throw load_error;
+        }
+      });
+    });
+    const load_promises = nodes.map((node, i) => {
+      if (load_error)
+        throw load_error;
+      return Promise.resolve().then(async () => {
+        try {
+          return await load_data({
+            event,
+            fetcher,
+            node,
+            parent: async () => {
+              const data = {};
+              for (let j = 0; j < i; j += 1) {
+                Object.assign(data, await load_promises[j]);
+              }
+              return data;
+            },
+            server_data_promise: server_promises[i],
+            state
+          });
+        } catch (e) {
+          load_error = e;
+          throw load_error;
+        }
+      });
+    });
+    for (const p of server_promises)
+      p.catch(() => {
+      });
+    for (const p of load_promises)
+      p.catch(() => {
+      });
+    for (let i = 0; i < nodes.length; i += 1) {
+      const node = nodes[i];
+      if (node) {
+        try {
+          const server_data = await server_promises[i];
+          const data = await load_promises[i];
+          branch.push({ node, server_data, data });
+        } catch (e) {
+          const error2 = normalize_error(e);
+          if (error2 instanceof Redirect) {
+            if (state.prerendering && should_prerender_data) {
+              const body = `window.__sveltekit_data = ${JSON.stringify({
+                type: "redirect",
+                location: error2.location
+              })}`;
+              state.prerendering.dependencies.set(data_pathname, {
+                response: new Response(body),
+                body
+              });
+            }
+            return redirect_response(error2.status, error2.location);
+          }
+          if (!(error2 instanceof HttpError)) {
+            options.handle_error(error2, event);
+          }
+          const status2 = error2 instanceof HttpError ? error2.status : 500;
+          while (i--) {
+            if (page.errors[i]) {
+              const index = page.errors[i];
+              const node2 = await options.manifest._.nodes[index]();
+              let j = i;
+              while (!branch[j])
+                j -= 1;
+              return await render_response({
+                event,
+                options,
+                state,
+                resolve_opts,
+                page_config: { router: true, hydrate: true },
+                status: status2,
+                error: error2,
+                branch: compact(branch.slice(0, j + 1)).concat({
+                  node: node2,
+                  data: null,
+                  server_data: null
+                }),
+                fetched,
+                cookies,
+                validation_errors: void 0
+              });
+            }
+          }
+          return new Response(
+            error2 instanceof HttpError ? error2.message : options.get_stack(error2),
+            { status: status2 }
+          );
+        }
+      } else {
+        branch.push(null);
+      }
+    }
+    if (state.prerendering && should_prerender_data) {
+      const body = `window.__sveltekit_data = ${devalue({
+        type: "data",
+        nodes: branch.map((branch_node) => branch_node == null ? void 0 : branch_node.server_data)
+      })}`;
+      state.prerendering.dependencies.set(data_pathname, {
+        response: new Response(body),
+        body
+      });
+    }
+    return await render_response({
+      event,
+      options,
+      state,
+      resolve_opts,
+      page_config: get_page_config(leaf_node, options),
+      status,
+      error: null,
+      branch: compact(branch),
+      validation_errors,
+      fetched,
+      cookies
+    });
+  } catch (error2) {
+    options.handle_error(error2, event);
+    return await respond_with_error({
+      event,
+      options,
+      state,
+      status: 500,
+      error: error2,
+      resolve_opts
+    });
+  }
+}
+function get_page_config(leaf, options) {
+  var _a, _b;
+  if (leaf.shared && "ssr" in leaf.shared) {
+    throw new Error(
+      "`export const ssr` has been removed \u2014 use the handle hook instead: https://kit.svelte.dev/docs/hooks#handle"
+    );
+  }
+  return {
+    router: ((_a = leaf.shared) == null ? void 0 : _a.router) ?? options.router,
+    hydrate: ((_b = leaf.shared) == null ? void 0 : _b.hydrate) ?? options.hydrate
+  };
+}
+async function handle_json_request(event, options, mod) {
+  const method = event.request.method;
+  const handler = mod[method];
+  if (!handler) {
+    return method_not_allowed(mod, method);
+  }
+  try {
+    const result = await handler.call(null, event);
+    if (result == null ? void 0 : result.errors) {
+      return json({ errors: result.errors }, { status: result.status || 400 });
+    }
+    return new Response(void 0, {
+      status: 204,
+      headers: (result == null ? void 0 : result.location) ? { location: result.location } : void 0
+    });
+  } catch (e) {
+    const error2 = normalize_error(e);
+    if (error2 instanceof Redirect) {
+      return redirect_response(error2.status, error2.location);
+    }
+    if (!(error2 instanceof HttpError)) {
+      options.handle_error(error2, event);
+    }
+    return json(error_to_pojo(error2, options.get_stack), {
+      status: error2 instanceof HttpError ? error2.status : 500
+    });
+  }
+}
+function redirect_response(status, location) {
+  return new Response(void 0, {
+    status,
+    headers: { location }
   });
 }
 function exec(match, names, types, matchers) {
@@ -2215,7 +1568,114 @@ function exec(match, names, types, matchers) {
   }
   return params;
 }
-const DATA_SUFFIX = "/__data.json";
+function once(fn) {
+  let done = false;
+  let result;
+  return () => {
+    if (done)
+      return result;
+    done = true;
+    return result = fn();
+  };
+}
+async function render_data(event, route, options, state) {
+  var _a;
+  if (!route.page) {
+    return new Response(void 0, {
+      status: 404
+    });
+  }
+  try {
+    const node_ids = [...route.page.layouts, route.page.leaf];
+    const invalidated = ((_a = event.url.searchParams.get("__invalid")) == null ? void 0 : _a.split("").map((x) => x === "y")) ?? node_ids.map(() => true);
+    let aborted = false;
+    const url = new URL(event.url);
+    url.pathname = normalize_path(
+      url.pathname.slice(0, -DATA_SUFFIX.length),
+      options.trailing_slash
+    );
+    url.searchParams.delete("__invalid");
+    url.searchParams.delete("__id");
+    const new_event = { ...event, url };
+    const functions = node_ids.map((n, i) => {
+      return once(async () => {
+        try {
+          if (aborted) {
+            return {
+              type: "skip"
+            };
+          }
+          const node = n == void 0 ? n : await options.manifest._.nodes[n]();
+          return load_server_data({
+            event: new_event,
+            state,
+            node,
+            parent: async () => {
+              const data = {};
+              for (let j = 0; j < i; j += 1) {
+                const parent = await functions[j]();
+                if (parent) {
+                  Object.assign(data, parent.data);
+                }
+              }
+              return data;
+            }
+          });
+        } catch (e) {
+          aborted = true;
+          throw e;
+        }
+      });
+    });
+    const promises = functions.map(async (fn, i) => {
+      if (!invalidated[i]) {
+        return {
+          type: "skip"
+        };
+      }
+      return fn();
+    });
+    let length = promises.length;
+    const nodes = await Promise.all(
+      promises.map(
+        (p, i) => p.catch((e) => {
+          const error2 = normalize_error(e);
+          if (error2 instanceof Redirect) {
+            throw error2;
+          }
+          length = Math.min(length, i + 1);
+          if (error2 instanceof HttpError) {
+            return {
+              type: "error",
+              httperror: { ...error2 }
+            };
+          }
+          options.handle_error(error2, event);
+          return {
+            type: "error",
+            error: error_to_pojo(error2, options.get_stack)
+          };
+        })
+      )
+    );
+    const server_data = {
+      type: "data",
+      nodes: nodes.slice(0, length)
+    };
+    return data_response(server_data);
+  } catch (e) {
+    const error2 = normalize_error(e);
+    if (error2 instanceof Redirect) {
+      const server_data = {
+        type: "redirect",
+        location: error2.location
+      };
+      return data_response(server_data);
+    } else {
+      return data_response(error_to_pojo(error2, options.get_stack));
+    }
+  }
+}
 const default_transform = ({ html }) => html;
 async function respond(request, options, state) {
   var _a, _b, _c, _d;
@@ -2258,11 +1718,8 @@ async function respond(request, options, state) {
     decoded = decoded.slice(options.paths.base.length) || "/";
   }
   const is_data_request = decoded.endsWith(DATA_SUFFIX);
-  if (is_data_request) {
-    const data_suffix_length = DATA_SUFFIX.length - (options.trailing_slash === "always" ? 1 : 0);
-    decoded = decoded.slice(0, -data_suffix_length) || "/";
-    url = new URL(url.origin + url.pathname.slice(0, -data_suffix_length) + url.search);
-  }
+  if (is_data_request)
+    decoded = decoded.slice(0, -DATA_SUFFIX.length);
   if (!((_c = state.prerendering) == null ? void 0 : _c.fallback)) {
     const matchers = await options.manifest._.matchers();
     for (const candidate of options.manifest._.routes) {
@@ -2277,41 +1734,55 @@ async function respond(request, options, state) {
       }
     }
   }
-  if (route) {
-    if (route.type === "page") {
-      const normalized = normalize_path(url.pathname, options.trailing_slash);
-      if (normalized !== url.pathname && !((_d = state.prerendering) == null ? void 0 : _d.fallback)) {
-        return new Response(void 0, {
-          status: 301,
-          headers: {
-            "x-sveltekit-normalize": "1",
-            location: (normalized.startsWith("//") ? url.origin + normalized : normalized) + (url.search === "?" ? "" : url.search)
-          }
-        });
-      }
-    } else if (is_data_request) {
+  if ((route == null ? void 0 : route.page) && !is_data_request) {
+    const normalized = normalize_path(url.pathname, options.trailing_slash);
+    if (normalized !== url.pathname && !((_d = state.prerendering) == null ? void 0 : _d.fallback)) {
       return new Response(void 0, {
-        status: 404
+        status: 301,
+        headers: {
+          "x-sveltekit-normalize": "1",
+          location: (normalized.startsWith("//") ? url.origin + normalized : normalized) + (url.search === "?" ? "" : url.search)
+        }
       });
     }
   }
+  const headers = {};
+  const cookies = [];
+  if (state.prerendering)
+    disable_search(url);
   const event = {
-    get clientAddress() {
-      if (!state.getClientAddress) {
-        throw new Error(
-          `${"@sveltejs/adapter-netlify"} does not specify getClientAddress. Please raise an issue`
-        );
-      }
-      Object.defineProperty(event, "clientAddress", {
-        value: state.getClientAddress()
-      });
-      return event.clientAddress;
-    },
+    getClientAddress: state.getClientAddress || (() => {
+      throw new Error(
+        `${"@sveltejs/adapter-netlify"} does not specify getClientAddress. Please raise an issue`
+      );
+    }),
     locals: {},
     params,
     platform: state.platform,
     request,
     routeId: route && route.id,
+    setHeaders: (new_headers) => {
+      for (const key2 in new_headers) {
+        const lower = key2.toLowerCase();
+        const value = new_headers[key2];
+        if (lower === "set-cookie") {
+          const new_cookies = Array.isArray(value) ? value : [value];
+          for (const cookie2 of new_cookies) {
+            if (cookies.includes(cookie2)) {
+              throw new Error(`"${key2}" header already has cookie with same value`);
+            }
+            cookies.push(cookie2);
+          }
+        } else if (lower in headers) {
+          throw new Error(`"${key2}" header is already set`);
+        } else {
+          headers[lower] = value;
+          if (state.prerendering && lower === "cache-control") {
+            state.prerendering.cache = value;
+          }
+        }
+      }
+    },
     url
   };
   const removed = (property, replacement, suffix = "") => ({
@@ -2328,6 +1799,7 @@ async function respond(request, options, state) {
     }
   };
   Object.defineProperties(event, {
+    clientAddress: removed("clientAddress", "getClientAddress"),
     method: removed("method", "request.method", details),
     headers: removed("headers", "request.headers", details),
     origin: removed("origin", "url.origin"),
@@ -2361,12 +1833,13 @@ async function respond(request, options, state) {
             event: event2,
             options,
             state,
-            $session: await options.hooks.getSession(event2),
             page_config: { router: true, hydrate: true },
-            stuff: {},
             status: 200,
             error: null,
             branch: [],
+            fetched: [],
+            validation_errors: void 0,
+            cookies: [],
             resolve_opts: {
               ...resolve_opts,
               ssr: false
@@ -2375,52 +1848,44 @@ async function respond(request, options, state) {
         }
         if (route) {
           let response2;
-          if (is_data_request && route.type === "page" && route.shadow) {
-            response2 = await render_endpoint(event2, await route.shadow(), options);
-            if (request.headers.has("x-sveltekit-load")) {
-              if (response2.status >= 300 && response2.status < 400) {
-                const location = response2.headers.get("location");
-                if (location) {
-                  const headers = new Headers(response2.headers);
-                  headers.set("x-sveltekit-location", location);
-                  response2 = new Response(void 0, {
-                    status: 204,
-                    headers
-                  });
-                }
-              }
-            }
+          if (is_data_request) {
+            response2 = await render_data(event2, route, options, state);
+          } else if (route.page) {
+            response2 = await render_page(event2, route, route.page, options, state, resolve_opts);
+          } else if (route.endpoint) {
+            response2 = await render_endpoint(event2, await route.endpoint());
           } else {
-            response2 = route.type === "endpoint" ? await render_endpoint(event2, await route.load(), options) : await render_page(event2, route, options, state, resolve_opts);
+            throw new Error("This should never happen");
           }
-          if (response2) {
-            if (response2.status === 200 && response2.headers.has("etag")) {
-              let if_none_match_value = request.headers.get("if-none-match");
-              if (if_none_match_value == null ? void 0 : if_none_match_value.startsWith('W/"')) {
-                if_none_match_value = if_none_match_value.substring(2);
-              }
-              const etag = response2.headers.get("etag");
-              if (if_none_match_value === etag) {
-                const headers = new Headers({ etag });
-                for (const key2 of [
-                  "cache-control",
-                  "content-location",
-                  "date",
-                  "expires",
-                  "vary"
-                ]) {
-                  const value = response2.headers.get(key2);
-                  if (value)
-                    headers.set(key2, value);
-                }
-                return new Response(void 0, {
-                  status: 304,
-                  headers
-                });
-              }
+          if (!is_data_request) {
+            for (const key2 in headers) {
+              const value = headers[key2];
+              response2.headers.set(key2, value);
             }
-            return response2;
           }
+          for (const cookie2 of cookies) {
+            response2.headers.append("set-cookie", cookie2);
+          }
+          if (response2.status === 200 && response2.headers.has("etag")) {
+            let if_none_match_value = request.headers.get("if-none-match");
+            if (if_none_match_value == null ? void 0 : if_none_match_value.startsWith('W/"')) {
+              if_none_match_value = if_none_match_value.substring(2);
+            }
+            const etag = response2.headers.get("etag");
+            if (if_none_match_value === etag) {
+              const headers2 = new Headers({ etag });
+              for (const key2 of ["cache-control", "content-location", "date", "expires", "vary"]) {
+                const value = response2.headers.get(key2);
+                if (value)
+                  headers2.set(key2, value);
+              }
+              return new Response(void 0, {
+                status: 304,
+                headers: headers2
+              });
+            }
+          }
+          return response2;
         }
         if (state.initiator === GENERIC_ERROR) {
           return new Response("Internal Server Error", {
@@ -2428,12 +1893,10 @@ async function respond(request, options, state) {
           });
         }
         if (!state.initiator) {
-          const $session = await options.hooks.getSession(event2);
           return await respond_with_error({
             event: event2,
             options,
             state,
-            $session,
             status: 404,
             error: new Error(`Not found: ${event2.url.pathname}`),
             resolve_opts
@@ -2466,12 +1929,10 @@ async function respond(request, options, state) {
       });
     }
     try {
-      const $session = await options.hooks.getSession(event);
       return await respond_with_error({
         event,
         options,
         state,
-        $session,
         status: 500,
         error: error2,
         resolve_opts
@@ -2489,8 +1950,6 @@ let assets = "";
 function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
-}
-function set_prerendering(value) {
 }
 const template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="icon" href="/favicon.png" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"><\/script>\n	' + head + '\n</head>\n\n<body>\n	<div id="svelte">' + body + '</div>\n	<script>\n		if (window.netlifyIdentity) {\n			window.netlifyIdentity.on("init", user => {\n				if (!user) {\n					window.netlifyIdentity.on("login", () => {\n						document.location.href = "/admin/";\n					});\n				}\n			});\n		}\n	<\/script>\n</body>\n\n</html>';
 let read = null;
@@ -2523,9 +1982,8 @@ class Server {
       manifest,
       method_override: { "parameter": "_method", "allowed": [] },
       paths: { base, assets },
-      prefix: assets + "/",
       prerender: {
-        default: true,
+        default: false,
         enabled: true
       },
       public_env: {},
@@ -2538,25 +1996,28 @@ class Server {
       trailing_slash: "never"
     };
   }
-  init({ env }) {
+  async init({ env }) {
     const entries = Object.entries(env);
     Object.fromEntries(entries.filter(([k]) => !k.startsWith("PUBLIC_")));
     const pub = Object.fromEntries(entries.filter(([k]) => k.startsWith("PUBLIC_")));
     this.options.public_env = pub;
+    if (!this.options.hooks) {
+      const module = await import("./chunks/hooks.js");
+      this.options.hooks = {
+        handle: module.handle || (({ event, resolve: resolve2 }) => resolve2(event)),
+        handleError: module.handleError || (({ error: error2 }) => console.error(error2.stack)),
+        externalFetch: module.externalFetch || fetch
+      };
+    }
   }
   async respond(request, options = {}) {
     if (!(request instanceof Request)) {
       throw new Error("The first argument to server.respond must be a Request object. See https://github.com/sveltejs/kit/pull/3384 for details");
     }
-    if (!this.options.hooks) {
-      const module2 = await Promise.resolve().then(() => __toESM(require("./_app/immutable/chunks/hooks-bced8853.js")));
-      this.options.hooks = {
-        getSession: module2.getSession || (() => ({})),
-        handle: module2.handle || (({ event, resolve: resolve2 }) => resolve2(event)),
-        handleError: module2.handleError || (({ error: error2 }) => console.error(error2.stack)),
-        externalFetch: module2.externalFetch || fetch
-      };
-    }
     return respond(request, this.options, options);
   }
 }
+export {
+  Server,
+  override
+};

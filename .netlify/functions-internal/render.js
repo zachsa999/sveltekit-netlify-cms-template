@@ -1,17 +1,25 @@
-const { init } = require('../serverless.js');
+import { init } from '../serverless.js';
 
-exports.handler = init({
+export const handler = init({
 	appDir: "_app",
 	assets: new Set(["admin/config.yml","admin/index.html","favicon.png"]),
 	mimeTypes: {".yml":"text/yaml",".html":"text/html",".png":"image/png"},
 	_: {
-		entry: {"file":"_app/immutable/start-0e5b3874.js","imports":["_app/immutable/start-0e5b3874.js","_app/immutable/chunks/index-03969575.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-0bf4faba.js","imports":["_app/immutable/start-0bf4faba.js","_app/immutable/chunks/index-4a50e133.js","_app/immutable/chunks/singletons-0c4ab1ce.js"],"stylesheets":[]},
 		nodes: [
-			() => Promise.resolve().then(() => require('../server/nodes/0.js')),
-			() => Promise.resolve().then(() => require('../server/nodes/1.js'))
+			() => import('../server/nodes/0.js'),
+			() => import('../server/nodes/1.js'),
+			() => import('../server/nodes/2.js')
 		],
 		routes: [
-			
+			{
+					id: "",
+					pattern: /^\/$/,
+					names: [],
+					types: [],
+					page: {"layouts":[0],"errors":[1],"leaf":2},
+					endpoint: null
+				}
 		],
 		matchers: async () => {
 			
