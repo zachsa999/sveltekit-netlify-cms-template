@@ -2,16 +2,6 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 collections:
-  - name: routes
-    identifier_field: name
-    label: routes
-    folder: src/routes
-    create: true
-    fields:
-      - name: title
-      - name: nav_label
-      - name: body
-        widget: markdown
   - label: "Blog"
     name: "posts"
     folder: "content/_posts"
