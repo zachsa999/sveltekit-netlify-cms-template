@@ -10,13 +10,7 @@ Integrates with [mdsvex.com](https://mdsvex.com) for powerful clean markdown. Th
 
 ## configure netlify
 
-Go to your site in the Netlify Admin
-
-Click identity in the sidebar
-
-Click Enable Identity and invite whoever you want
-
-Scroll down to External Providers and add a provider, for this app its GitHub, select default to hide github branding in the page
+Site settings > Identity > Services > Git Gateway, and select Enable Git Gateway.
 
 ## create-svelte
 
