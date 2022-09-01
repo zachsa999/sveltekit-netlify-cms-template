@@ -1,16 +1,22 @@
-# A plug and play Sveltekit template with NetlifyCMS, MDsveX, and Tailwinds
+# A plug and play Sveltekit template with NetlifyCMS, and MDsveX
 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/buhrmi/sveltekit-netlify-cms&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
-
-### Why Tailwinds?
-
-Tailwinds is configured to only use svelte html and css files, its there only as a possibility. With preproccess it has no effect on the speed of the deployed site if it is not used.
 
 Visit [kit.svelte.dev](https://kit.svelte.dev) to read the SvelteKit docs.
 
 Go to [netlifycms.org](https://www.netlifycms.org) to check out the static git based cms!
 
 Integrates with [mdsvex.com](https://mdsvex.com) for powerful clean markdown. This is based on [mdx](https://mdxjs.com/docs/what-is-mdx/#mdx-syntax), view this site for the syntax.
+
+## configure netlify
+
+Go to your site in the Netlify Admin
+
+Click identity in the sidebar
+
+Click Enable Identity and invite whoever you want
+
+Scroll down to External Providers and add a provider, for this app its GitHub, select default to hide github branding in the page
 
 ## create-svelte
 
