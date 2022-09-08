@@ -1,6 +1,5 @@
-# A plug and play Sveltekit template with NetlifyCMS, and MDsveX
+# A Sveltekit starter with NetlifyCMS, Attractions Component LIbrary, Svelte-Icons, and MDsveX
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/buhrmi/sveltekit-netlify-cms&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 Visit [kit.svelte.dev](https://kit.svelte.dev) to read the SvelteKit docs.
 
@@ -8,7 +7,13 @@ Go to [netlifycms.org](https://www.netlifycms.org) to check out the static git b
 
 Integrates with [mdsvex.com](https://mdsvex.com) for powerful clean markdown. This is based on [mdx](https://mdxjs.com/docs/what-is-mdx/#mdx-syntax), view this site for the syntax.
 
+[Attractions](https://illright.github.io/attractions/) because it is awesome!
+
+[svelte-icons](https://svelte-icons.vercel.app) now I'm overdoing it.
+
 ## configure netlify
+
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/buhrmi/sveltekit-netlify-cms&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 Site settings > Identity > Services > Git Gateway, and select Enable Git Gateway.
 

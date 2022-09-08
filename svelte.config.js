@@ -1,11 +1,23 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-netlify'
+import sveltePreprocess from 'svelte-preprocess';
+import makeAttractionsImporter from 'attractions/importer.js';
+import path from 'path'
 
+const __dirname = ''
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.svelte.md', '.md', '.svx'],
 	preprocess: [
+		sveltePreprocess({
+			scss: {
+				importer: makeAttractionsImporter({
+					themeFile: path.join(__dirname, 'static/css/theme.scss'),
+					includePaths: [path.join(__dirname, './static/css')],
+				}),
+			}
+		}),
 
 		mdsvex({
 			extensions: ['.svelte.md', '.md', '.svx'],
@@ -19,16 +31,9 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			// default options are shown. On some platforms
-			// these options are set automatically — see below
-			// pages: 'build',
-			// assets: 'build',
-			// fallback: null,
-			// precompress: false
 		}),
 
 		prerender: {
-			// This can be false if you're using a fallback (i.e. SPA mode)
 		}
 	},
 
