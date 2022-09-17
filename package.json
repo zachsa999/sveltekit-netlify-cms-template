@@ -26,6 +26,7 @@
 		"prettier-plugin-svelte": "^2.7.0",
 		"sass": "^1.54.9",
 		"svelte": "^3.49.0",
+		"svelte-feather-icons": "^4.0.0",
 		"svelte-preprocess": "^4.10.7",
 		"vite": "^3.0.9"
 	},

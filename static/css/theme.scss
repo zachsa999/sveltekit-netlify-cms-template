@@ -1,2 +1,4 @@
-@forward '~attractions/_variables' with ($main: #4300B0,
+@forward '~attractions/_variables' with ($main: green,
+    $font: "'Ubuntu', sans-serif",
 );
+$something-else: red;

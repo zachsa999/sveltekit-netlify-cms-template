@@ -14,8 +14,9 @@ const config = {
 			scss: {
 				importer: makeAttractionsImporter({
 					themeFile: path.join(__dirname, 'static/css/theme.scss'),
-					includePaths: [path.join(__dirname, './static/css')],
+					nodeModulesPath: path.join(__dirname, 'node_modules'),
 				}),
+				includePaths: [path.join(__dirname, './static/css')],
 			}
 		}),
 
