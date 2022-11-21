@@ -7,7 +7,9 @@ Go to [netlifycms.org](https://www.netlifycms.org) to check out the static git b
 
 Integrates with [mdsvex.com](https://mdsvex.com) for powerful clean markdown. This is based on [mdx](https://mdxjs.com/docs/what-is-mdx/#mdx-syntax), view this site for the syntax.
 
-[Attractions](https://illright.github.io/attractions/) because it is awesome!
+Tailwinds CSS is a thing
+
+Daisy UI Uses Tailwindscss
 
 [svelte-icons](https://svelte-icons.vercel.app) now I'm overdoing it.
 

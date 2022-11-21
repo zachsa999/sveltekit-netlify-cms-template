@@ -10,6 +10,7 @@
 			cms!
 		</p>
 		<p>Tailwinds CSS is a thing</p>
+		<p>Daisy UI Uses Tailwindscss</p>
 		<p>
 			Integrates with <a href="https://mdsvex.com">mdsvex.com</a> for powerful clean markdown.
 			<br />This is based on <a href="https://mdxjs.com/docs/what-is-mdx/#mdx-syntax">mdx</a>, view
