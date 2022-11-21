@@ -1,23 +1,13 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-netlify'
-import sveltePreprocess from 'svelte-preprocess';
-import makeAttractionsImporter from 'attractions/importer.js';
-import path from 'path'
-
-const __dirname = ''
+import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.svelte.md', '.md', '.svx'],
 	preprocess: [
-		sveltePreprocess({
-			scss: {
-				importer: makeAttractionsImporter({
-					themeFile: path.join(__dirname, 'static/css/theme.scss'),
-					nodeModulesPath: path.join(__dirname, 'node_modules'),
-				}),
-				includePaths: [path.join(__dirname, './static/css')],
-			}
+		preprocess({
+			postcss: true,
 		}),
 
 		mdsvex({
@@ -31,13 +21,10 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter({
-		}),
-
+		adapter: adapter(),
 		prerender: {
 		}
 	},
-
 };
 
 export default config;
