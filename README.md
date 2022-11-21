@@ -49,3 +49,7 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+# Issues
+
+With the new Sveltekit router, only components work with this install of mdSvex. push an update if you get it to work. I have not had the need yet.
